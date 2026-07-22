@@ -34,7 +34,7 @@ public class PowerCellCounterUI : MonoBehaviour
     {
         if (counterText != null)
         {
-            counterText.text = $"Power Cells: {amount}";
+            counterText.text = $"Power Cells: {amount}/10";
         }
     }
 }
