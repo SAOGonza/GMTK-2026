@@ -13,6 +13,7 @@ public class PlayerMoveState : PlayerState
     {
         player.Move();
 
+        // Stop moving when there is no movement input detected.
         if (player.MoveInput.sqrMagnitude == 0f)
         {
             stateMachine.ChangeState(player.IdleState);
