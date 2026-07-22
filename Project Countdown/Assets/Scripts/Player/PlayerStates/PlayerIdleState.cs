@@ -11,6 +11,14 @@ public class PlayerIdleState : PlayerState
 
     public override void Update()
     {
+        if (player.IsUnderwater)
+        {
+            stateMachine.ChangeState(player.SwimState);
+            return;
+        }
+
+        player.ApplyGroundGravity();
+
         // Begin moving when there is movement input detected.
         if (player.MoveInput.sqrMagnitude > 0f)
         {

@@ -11,6 +11,12 @@ public class PlayerMoveState : PlayerState
 
     public override void Update()
     {
+        if (player.IsUnderwater)
+        {
+            stateMachine.ChangeState(player.SwimState);
+            return;
+        }
+
         player.Move();
 
         // Stop moving when there is no movement input detected.
