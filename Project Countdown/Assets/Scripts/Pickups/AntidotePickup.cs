@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PowerCellPickup : Pickup
+public class AntidotePickup : Pickup
 {
     public override void Interact(Player player)
     {
@@ -16,7 +16,7 @@ public class PowerCellPickup : Pickup
             return;
         }
 
-        inventory.AddPowerCell();
+        inventory.AddAntidote();
         base.Interact(player);
     }
 }

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 258f24c48f5183c4ab1b89abf0835662, type: 3}
-  m_Name: PowerCellData
+  m_Name: Power Cell Data
   m_EditorClassIdentifier: Assembly-CSharp::PickupData
   pickupName: Power Cell
   pickupVFX: {fileID: 0}
