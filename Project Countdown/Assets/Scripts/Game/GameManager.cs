@@ -9,12 +9,16 @@ public class GameManager : MonoBehaviour
         Won
     }
 
+    // Replace with Game.Manager in all references
     public static GameManager Instance { get; private set; }
     public GameState CurrentState { get; private set; }
     public bool IsGameActive => CurrentState == GameState.Playing;
 
+    public float Oxygen = 100f;
+
     private void Awake()
     {
+        Game.Manager = this;
         if (Instance != null && Instance != this)
         {
             Destroy(gameObject);
