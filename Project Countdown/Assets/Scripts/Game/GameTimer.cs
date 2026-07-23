@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameTimer : MonoBehaviour
 {
+    public static GameTimer Instance;
     [Header("Monster Gauge")]
     [SerializeField] private float transformationDuration = 600f;
 
@@ -12,6 +13,11 @@ public class GameTimer : MonoBehaviour
     public event Action OnGaugeDepleted;
 
     private bool isDepleted;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {
