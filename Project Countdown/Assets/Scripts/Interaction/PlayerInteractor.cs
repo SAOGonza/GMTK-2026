@@ -13,10 +13,14 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private TMP_Text interactionPromptText;
 
+    private Player player;
+
     private IInteractable currentInteractable;
 
     private void Awake()
     {
+        player = GetComponent<Player>();
+
         if (playerCamera == null)
         {
             playerCamera = Camera.main;
@@ -61,6 +65,9 @@ public class PlayerInteractor : MonoBehaviour
             return;
         }
 
+        IContextualInteractable contextualInteractable = currentInteractable as IContextualInteractable;
+        contextualInteractable?.SetInteractor(player);
+
         ShowPrompt(currentInteractable.InteractionPrompt);
     }
 
@@ -70,7 +77,7 @@ public class PlayerInteractor : MonoBehaviour
             return;
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
-            currentInteractable.Interact(GetComponent<Player>());
+            currentInteractable.Interact(player);
     }
 
     private void ShowPrompt(string message)

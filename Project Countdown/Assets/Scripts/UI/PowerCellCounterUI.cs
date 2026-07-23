@@ -32,9 +32,9 @@ public class PowerCellCounterUI : MonoBehaviour
 
     private void UpdateCounter(int amount)
     {
-        if (counterText != null)
-        {
-            counterText.text = $"Power Cells: {amount}/10";
-        }
+        if (counterText == null || playerInventory == null)
+            return;
+
+        counterText.text = $"Power Cells: {amount}/" + $"{playerInventory.RequiredPowerCells}";
     }
 }
