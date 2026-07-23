@@ -130,8 +130,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
-<<<<<<< Updated upstream
-=======
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
@@ -348,7 +346,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &195527083
 GameObject:
   m_ObjectHideFlags: 0
@@ -995,8 +992,6 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &335810255
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1195,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366394913}
   m_CullTransparentMesh: 1
->>>>>>> Stashed changes
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -1328,8 +1322,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_RenderingLayers: 1
   m_ShadowRenderingLayers: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &690376553
 GameObject:
   m_ObjectHideFlags: 0
@@ -1719,7 +1711,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MonsterGaugeUI
   gameTimer: {fileID: 195527086}
   monsterGaugeSlider: {fileID: 1076846489}
->>>>>>> Stashed changes
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2153,8 +2144,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &1065341376
 GameObject:
   m_ObjectHideFlags: 0
@@ -2929,7 +2918,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!1 &1581718701
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,11 +3303,9 @@ SceneRoots:
   - {fileID: 991209523}
   - {fileID: 8828740628989857625}
   - {fileID: 1581718704}
-<<<<<<< Updated upstream
   - {fileID: 1547160626545939595}
   - {fileID: 4945871415791670098}
   - {fileID: 9043161629945279670}
-=======
   - {fileID: 1638932253}
   - {fileID: 1181862003}
   - {fileID: 130148492}
@@ -3331,4 +3317,3 @@ SceneRoots:
   - {fileID: 1566152880}
   - {fileID: 1262230919}
   - {fileID: 690376558}
->>>>>>> Stashed changes
