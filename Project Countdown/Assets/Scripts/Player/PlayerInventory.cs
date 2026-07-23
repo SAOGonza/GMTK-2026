@@ -21,16 +21,15 @@ public class PlayerInventory : MonoBehaviour
         OnPowerCellCountChanged?.Invoke(PowerCellCount);
     }
 
-<<<<<<< Updated upstream
     public void AddAntidote()
     {
         AntidoteCount++;
         OnAntidoteCountChanged?.Invoke(AntidoteCount);
-=======
+    }
+
     public void RemovePowerCells(int amount)
     {
         PowerCellCount = Mathf.Max(0, PowerCellCount - amount);
         OnPowerCellCountChanged?.Invoke(PowerCellCount);
->>>>>>> Stashed changes
     }
 }
