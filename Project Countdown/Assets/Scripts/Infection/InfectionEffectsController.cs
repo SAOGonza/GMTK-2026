@@ -19,6 +19,7 @@ public class InfectionEffectsController : MonoBehaviour
     [SerializeField] private AudioClip stage50Clip;
     [SerializeField] private AudioClip stage25Clip;
     [SerializeField] private AudioClip transformationClip;
+    [SerializeField] private AudioClip drownedClip;
 
     [Header("Camera")]
     [SerializeField] private CinemachineImpulseSource impulseSource;
@@ -359,8 +360,8 @@ public class InfectionEffectsController : MonoBehaviour
             gameOverScreen.blocksRaycasts = true;
         }
 
-        if (transformationClip != null && audioSource != null)
-            audioSource.PlayOneShot(transformationClip);
+        if (drownedClip != null && audioSource != null)
+            audioSource.PlayOneShot(drownedClip);
 
         float elapsed = 0f;
 

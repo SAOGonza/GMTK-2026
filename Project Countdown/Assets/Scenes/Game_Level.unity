@@ -1338,6 +1338,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 408523394}
     - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: drownedClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f3b01aefc7cb6444a44cf892c0e2898, type: 3}
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: victoryScreen
       value: 
       objectReference: {fileID: 525451735}
