@@ -23,8 +23,12 @@ public class PauseMenuController : MonoBehaviour
     {
         if (Keyboard.current == null ||
             !Keyboard.current.escapeKey.wasPressedThisFrame ||
-            sceneFade.isFading
+            sceneFade == null ||
+            sceneFade.IsFading
             )
+            return;
+
+        if (GameManager.Instance == null || !GameManager.Instance.IsGameActive)
             return;
 
         if (IsPaused)
@@ -35,8 +39,10 @@ public class PauseMenuController : MonoBehaviour
 
     public void PauseGame()
     {
-        IsPaused = true;
+        if (GameManager.Instance == null || !GameManager.Instance.IsGameActive)
+            return;
 
+        IsPaused = true;
         pauseMenuUI.SetActive(true);
 
         Time.timeScale = 0f;
@@ -59,7 +65,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        if (sceneFade.isFading)
+        if (sceneFade.IsFading)
             return;
 
         IsPaused = false;
@@ -75,5 +81,16 @@ public class PauseMenuController : MonoBehaviour
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;
 #endif
+    }
+
+    // Safe guard to prevent player from pausing exactly as Game Over triggers.
+    public void CloseForGameOver()
+    {
+        IsPaused = false;
+
+        if (pauseMenuUI != null)
+            pauseMenuUI.SetActive(false);
+
+        Time.timeScale = 1f;
     }
 }

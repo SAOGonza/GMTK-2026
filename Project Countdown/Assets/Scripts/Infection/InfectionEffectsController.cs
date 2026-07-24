@@ -41,6 +41,12 @@ public class InfectionEffectsController : MonoBehaviour
 
     [Header("Game Over")]
     [SerializeField] private float gameOverFadeDuration = 2f;
+    [SerializeField] private float backToMenuDelay = 2f;
+    [SerializeField] private GameObject backToMenuButton;
+    [SerializeField] private SceneFade sceneFade;
+    [SerializeField] private string mainMenuSceneName = "Main_Menu";
+
+    [SerializeField] private PauseMenuController pauseMenuController;
 
     private bool triggered75;
     private bool triggered50;
@@ -59,7 +65,11 @@ public class InfectionEffectsController : MonoBehaviour
         if (gameOverScreen != null)
         {
             gameOverScreen.alpha = 0f;
+            gameOverScreen.blocksRaycasts = false;
         }
+
+        if (backToMenuButton != null)
+            backToMenuButton.SetActive(false);
     }
 
     private void OnEnable()
@@ -210,14 +220,19 @@ public class InfectionEffectsController : MonoBehaviour
 
     private IEnumerator PlayTransformationSequence()
     {
+        pauseMenuController?.CloseForGameOver();
         RestoreTemporaryEffects();
 
         player?.SetMovementSpeedMultiplier(0f);
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (gameOverScreen != null)
+            gameOverScreen.blocksRaycasts = true;
+
         if (transformationClip != null && audioSource != null)
-        {
             audioSource.PlayOneShot(transformationClip);
-        }
 
         float elapsed = 0f;
 
@@ -225,20 +240,29 @@ public class InfectionEffectsController : MonoBehaviour
         {
             elapsed += Time.unscaledDeltaTime;
 
-            float fade = Mathf.Clamp01(elapsed / gameOverFadeDuration);
+            float fadeAmount = Mathf.Clamp01(elapsed / gameOverFadeDuration);
 
             if (gameOverScreen != null)
-            {
-                gameOverScreen.alpha = fade;
-            }
+                gameOverScreen.alpha = fadeAmount;
 
             yield return null;
         }
 
         if (gameOverScreen != null)
-        {
             gameOverScreen.alpha = 1f;
-        }
+
+        yield return new WaitForSecondsRealtime(backToMenuDelay);
+
+        if (backToMenuButton != null)
+            backToMenuButton.SetActive(true);
+    }
+
+    public void ReturnToMainMenu()
+    {
+        if (sceneFade == null || sceneFade.IsFading)
+            return;
+
+        sceneFade.LoadScene(mainMenuSceneName);
     }
 
     private void RestoreTemporaryEffects()

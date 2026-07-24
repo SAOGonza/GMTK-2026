@@ -93,6 +93,11 @@ MonoBehaviour:
   stage25OverlayStrength: 0.8
   stumbleSpeedMultiplier: 0.4
   gameOverFadeDuration: 2
+  backToMenuDelay: 2
+  backToMenuButton: {fileID: 0}
+  sceneFade: {fileID: 0}
+  mainMenuSceneName: Main_Menu
+  pauseMenuController: {fileID: 0}
 --- !u!114 &3778107276019592119
 MonoBehaviour:
   m_ObjectHideFlags: 0

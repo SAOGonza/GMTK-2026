@@ -130,6 +130,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!1 &82784936 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3130069389428069279, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+  m_PrefabInstance: {fileID: 8828740628989857625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &191217603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1487,6 +1492,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11676a5571eec5843a01309152b721d7, type: 3}
+--- !u!114 &1945992307 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+  m_PrefabInstance: {fileID: 8100634865021655585}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7e0978f41ca06b4493fc21bcb5d5f9f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InfectionEffectsController
 --- !u!1 &1999205612
 GameObject:
   m_ObjectHideFlags: 0
@@ -1927,18 +1943,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3356235219335088047, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: transformationDuration
+      value: 600
+      objectReference: {fileID: 0}
     - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: player
       value: 
       objectReference: {fileID: 11213666233966392}
     - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: sceneFade
+      value: 
+      objectReference: {fileID: 1047752186}
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: gameOverScreen
       value: 
       objectReference: {fileID: 1470788574}
     - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: backToMenuButton
+      value: 
+      objectReference: {fileID: 82784936}
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: infectionOverlay
       value: 
       objectReference: {fileID: 1502145758}
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: pauseMenuController
+      value: 
+      objectReference: {fileID: 1999205613}
     - target: {fileID: 7913560132954685706, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1996,6 +2028,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 327451753065133712, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1945992307}
     - target: {fileID: 1078721861074808912, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
       propertyPath: m_Pivot.x
       value: 0

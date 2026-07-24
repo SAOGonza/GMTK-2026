@@ -8,7 +8,7 @@ public class SceneFade : MonoBehaviour
     [SerializeField] private CanvasGroup fadeOverlay;
     [SerializeField] private float fadeDuration = 1f;
 
-    public bool isFading { get; private set; }
+    public bool IsFading { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -18,7 +18,7 @@ public class SceneFade : MonoBehaviour
 
     public void LoadScene(string sceneName)
     {
-        if (isFading)
+        if (IsFading)
             return;
 
         StartCoroutine(FadeOutAndLoad(sceneName));
@@ -26,7 +26,7 @@ public class SceneFade : MonoBehaviour
 
     private IEnumerator FadeIn()
     {
-        isFading = true;
+        IsFading = true;
 
         fadeOverlay.gameObject.SetActive(true);
         fadeOverlay.blocksRaycasts = true;
@@ -46,12 +46,12 @@ public class SceneFade : MonoBehaviour
         fadeOverlay.alpha = 0f;
         fadeOverlay.blocksRaycasts = false;
 
-        isFading = false;
+        IsFading = false;
     }
 
     private IEnumerator FadeOutAndLoad(string sceneName)
     {
-        isFading = true;
+        IsFading = true;
 
         fadeOverlay.gameObject.SetActive(true);
         fadeOverlay.blocksRaycasts = true;
