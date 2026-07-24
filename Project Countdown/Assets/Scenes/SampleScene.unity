@@ -250,6 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
   transformationDuration: 600
+  antidotePauseDuration: 25
 --- !u!1 &282992050
 GameObject:
   m_ObjectHideFlags: 0
@@ -1975,6 +1976,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: efa2d1fd63059554ea8df37363491895, type: 2}
+    - target: {fileID: 7047873707011921585, guid: e98aabe61cdd6c141927ac27aaedb170, type: 3}
+      propertyPath: gameTimer
+      value: 
+      objectReference: {fileID: 195527086}
     - target: {fileID: 9016128620539804167, guid: e98aabe61cdd6c141927ac27aaedb170, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.985

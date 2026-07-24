@@ -7,6 +7,11 @@ public class GameTimer : MonoBehaviour
     [Header("Monster Gauge")]
     [SerializeField] private float transformationDuration = 600f;
 
+    [Header("Antidote")]
+    [SerializeField] private float antidotePauseDuration = 25f;
+
+    private float antidoteTimeRemaining;
+
     public float CurrentGauge { get; private set; } = 1f;
 
     public event Action<float> OnGaugeChanged;
@@ -29,7 +34,20 @@ public class GameTimer : MonoBehaviour
         if (isDepleted || GameManager.Instance == null || !GameManager.Instance.IsGameActive)
             return;
 
+        if (antidoteTimeRemaining > 0f)
+        {
+            antidoteTimeRemaining -= Time.deltaTime;
+            return;
+        }
+
         DepleteGauge();
+    }
+
+    public void ApplyAntidote()
+    {
+        antidoteTimeRemaining = antidotePauseDuration;
+
+        Debug.Log($"Antidote applied. Infection paused for {antidotePauseDuration} seconds.");
     }
 
     private void DepleteGauge()
