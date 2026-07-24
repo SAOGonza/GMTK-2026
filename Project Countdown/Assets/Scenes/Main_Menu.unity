@@ -468,6 +468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 618965492}
   - component: {fileID: 618965491}
+  - component: {fileID: 618965493}
   m_Layer: 0
   m_Name: MainMenuManager
   m_TagString: Untagged
@@ -487,9 +488,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7c5614b19f7624db41d66b8bced9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
-  gameSceneName: Game_Level
-  fadeOverlay: {fileID: 1978519636}
-  fadeDuration: 1
+  gameSceneName: SampleScene
+  sceneFade: {fileID: 618965493}
 --- !u!4 &618965492
 Transform:
   m_ObjectHideFlags: 0
@@ -505,6 +505,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &618965493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 618965490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a813cfa58260a014d825421468d9c4a7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SceneFade
+  fadeOverlay: {fileID: 1978519636}
+  fadeDuration: 1
 --- !u!1 &1107530443
 GameObject:
   m_ObjectHideFlags: 0
