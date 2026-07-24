@@ -2,19 +2,18 @@ using UnityEngine;
 
 public class BreathingBehavior : MonoBehaviour
 {
-    private bool Underwater = false;
+    private bool underwater;
+    private bool hasDrowned;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
+    [Header("Oxygen")]
+    [SerializeField] private float oxygenDrainRate = 10f;
+    [SerializeField] private float oxygenRecoveryRate = 100f;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Water"))
         {
-            Underwater = true;
+            underwater = true;
         }
     }
 
@@ -22,22 +21,44 @@ public class BreathingBehavior : MonoBehaviour
     {
         if (other.CompareTag("Water"))
         {
-            Underwater = false;
+            underwater = false;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Underwater)
+        if (GameManager.Instance == null)
+            return;
+
+        // Stop processing oxygen after Game Over or Victory.
+        if (!GameManager.Instance.IsGameActive)
+            return;
+
+        if (underwater)
         {
-            GameManager.Instance.Oxygen -= Time.deltaTime * 10f;
+            GameManager.Instance.Oxygen -= Time.deltaTime * oxygenDrainRate;
             GameManager.Instance.Oxygen = Mathf.Max(0f, GameManager.Instance.Oxygen);
+
+            CheckForDrowning();
         }
+
         else
         {
-            GameManager.Instance.Oxygen += Time.deltaTime * 100f;
+            GameManager.Instance.Oxygen += Time.deltaTime * oxygenRecoveryRate;
             GameManager.Instance.Oxygen = Mathf.Min(100f, GameManager.Instance.Oxygen);
         }
+    }
+
+    private void CheckForDrowning()
+    {
+        if (hasDrowned)
+            return;
+
+        if (GameManager.Instance.Oxygen > 0f)
+            return;
+
+        hasDrowned = true;
+        GameManager.Instance?.TriggerGameOver();
     }
 }

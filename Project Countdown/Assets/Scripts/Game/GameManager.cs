@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
     public float Oxygen = 100f;
 
     public event Action OnGameWon;
+    public event Action OnGameOver;
 
     private void Awake()
     {
@@ -52,6 +53,7 @@ public class GameManager : MonoBehaviour
 
         CurrentState = GameState.GameOver;
         Debug.Log("Game Over: The player transformed.");
+        OnGameOver?.Invoke();
     }
 
     public void TriggerWin()

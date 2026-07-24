@@ -95,6 +95,11 @@ public class InfectionEffectsController : MonoBehaviour
         StartCoroutine(VictorySequence());
     }
 
+    public void PlayDrownedSequence()
+    {
+        StartCoroutine(DrownedSequence());
+    }
+
     private IEnumerator VictorySequence()
     {
         RestoreTemporaryEffects();
@@ -146,7 +151,10 @@ public class InfectionEffectsController : MonoBehaviour
         }
 
         if (gameManager != null)
+        {
+            gameManager.OnGameOver += PlayDrownedSequence;
             gameManager.OnGameWon += PlayVictorySequence;
+        }
     }
 
     private void Start()
@@ -165,7 +173,10 @@ public class InfectionEffectsController : MonoBehaviour
         }
 
         if (gameManager != null)
+        {
+            gameManager.OnGameOver -= PlayDrownedSequence;
             gameManager.OnGameWon -= PlayVictorySequence;
+        }
     }
 
     private void HandleGaugeChanged(float gaugeValue)
@@ -291,6 +302,48 @@ public class InfectionEffectsController : MonoBehaviour
     }
 
     private IEnumerator PlayTransformationSequence()
+    {
+        pauseMenuController?.CloseForGameOver();
+        RestoreTemporaryEffects();
+
+        player?.SetMovementSpeedMultiplier(0f);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (gameOverScreen != null)
+        {
+            gameOverScreen.interactable = true;
+            gameOverScreen.blocksRaycasts = true;
+        }
+
+        if (transformationClip != null && audioSource != null)
+            audioSource.PlayOneShot(transformationClip);
+
+        float elapsed = 0f;
+
+        while (elapsed < gameOverFadeDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+
+            float fadeAmount = Mathf.Clamp01(elapsed / gameOverFadeDuration);
+
+            if (gameOverScreen != null)
+                gameOverScreen.alpha = fadeAmount;
+
+            yield return null;
+        }
+
+        if (gameOverScreen != null)
+            gameOverScreen.alpha = 1f;
+
+        yield return new WaitForSecondsRealtime(backToMenuDelay);
+
+        if (backToMenuButton != null)
+            backToMenuButton.SetActive(true);
+    }
+
+    private IEnumerator DrownedSequence()
     {
         pauseMenuController?.CloseForGameOver();
         RestoreTemporaryEffects();
