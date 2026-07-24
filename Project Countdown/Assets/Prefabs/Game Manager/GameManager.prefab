@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9f706f43d38b5489b43f31fb6ca8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
-  transformationDuration: 40
+  transformationDuration: 600
   antidotePauseDuration: 25
 --- !u!114 &7205918387827038426
 MonoBehaviour:
