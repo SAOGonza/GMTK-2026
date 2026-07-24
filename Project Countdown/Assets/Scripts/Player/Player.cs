@@ -27,6 +27,8 @@ public class Player : MonoBehaviour
 
     public bool IsUnderwater { get; private set; }
 
+    public float MovementSpeedMultiplier { get; private set; } = 1f;
+
     public PlayerStateMachine StateMachine { get; private set; }
 
     public PlayerIdleState IdleState { get; private set; }
@@ -97,7 +99,7 @@ public class Player : MonoBehaviour
             forward * MoveInput.y +
             right * MoveInput.x;
 
-        Vector3 velocity = moveDirection * moveSpeed;
+        Vector3 velocity = moveDirection * moveSpeed * MovementSpeedMultiplier;
 
         // CharacterController.Move does not apply gravity.
         // This keeps the controller pressed against the ground.
@@ -105,6 +107,11 @@ public class Player : MonoBehaviour
         velocity.y = verticalVelocity;
 
         CharacterController.Move(velocity * Time.deltaTime);
+    }
+
+    public void SetMovementSpeedMultiplier(float multiplier)
+    {
+        MovementSpeedMultiplier = Mathf.Max(0f, multiplier);
     }
 
     private void ApplyGravity()
@@ -144,7 +151,7 @@ public class Player : MonoBehaviour
         right.Normalize();
 
         Vector3 moveDirection = (forward * MoveInput.y) + (right * MoveInput.x);
-        Vector3 velocity = moveDirection * swimSpeed;
+        Vector3 velocity = moveDirection * swimSpeed * MovementSpeedMultiplier;
 
         // Determine if player is rising or sinking based on vertical input.
         bool isRising = Keyboard.current != null && Keyboard.current.spaceKey.isPressed;

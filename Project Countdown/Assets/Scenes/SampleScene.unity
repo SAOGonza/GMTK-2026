@@ -1220,6 +1220,16 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11676a5571eec5843a01309152b721d7, type: 3}
+--- !u!225 &1470788574 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 2741146262523293778, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+  m_PrefabInstance: {fileID: 8828740628989857625}
+  m_PrefabAsset: {fileID: 0}
+--- !u!225 &1502145758 stripped
+CanvasGroup:
+  m_CorrespondingSourceObject: {fileID: 8220742750616030955, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+  m_PrefabInstance: {fileID: 8828740628989857625}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1581718701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1551,6 +1561,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+--- !u!114 &11213666233966392 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+  m_PrefabInstance: {fileID: 11213666233966391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8e037867e85fdc4ba24316dc8af5057, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
 --- !u!1001 &1547160626545939595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1803,6 +1824,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 11213666233966392}
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: gameOverScreen
+      value: 
+      objectReference: {fileID: 1470788574}
+    - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: infectionOverlay
+      value: 
+      objectReference: {fileID: 1502145758}
     - target: {fileID: 7913560132954685706, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
