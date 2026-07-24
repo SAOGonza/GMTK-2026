@@ -5382,7 +5382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7c5614b19f7624db41d66b8bced9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
-  gameSceneName: SampleScene
+  gameSceneName: Game_Level
   sceneFade: {fileID: 618965493}
 --- !u!4 &618965492
 Transform:
