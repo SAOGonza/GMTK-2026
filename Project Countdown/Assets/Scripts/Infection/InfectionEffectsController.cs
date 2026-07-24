@@ -301,7 +301,10 @@ public class InfectionEffectsController : MonoBehaviour
         Cursor.visible = true;
 
         if (gameOverScreen != null)
+        {
+            gameOverScreen.interactable = true;
             gameOverScreen.blocksRaycasts = true;
+        }
 
         if (transformationClip != null && audioSource != null)
             audioSource.PlayOneShot(transformationClip);
