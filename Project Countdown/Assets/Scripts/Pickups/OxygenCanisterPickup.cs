@@ -7,7 +7,7 @@ public class OxygenCanisterPickup : Pickup
         if (player == null)
             return;
 
-        GameTimer.Instance.ResetGauge();
+        Game.Manager.Oxygen = 100f;
         base.Interact(player);
     }
 }
