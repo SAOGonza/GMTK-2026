@@ -10,6 +10,9 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField] private SceneFade sceneFade;
     [SerializeField] private string mainMenuSceneName = "Main_Menu";
 
+    [Header("Gameplay Input")]
+    [SerializeField] private Behaviour[] gameplayInputBehaviours;
+
     public bool IsPaused { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,6 +40,15 @@ public class PauseMenuController : MonoBehaviour
             PauseGame();
     }
 
+    private void SetGameplayInputEnabled(bool isEnabled)
+    {
+        foreach (Behaviour behaviour in gameplayInputBehaviours)
+        {
+            if (behaviour != null)
+                behaviour.enabled = isEnabled;
+        }
+    }
+
     public void PauseGame()
     {
         if (GameManager.Instance == null || !GameManager.Instance.IsGameActive)
@@ -45,6 +57,7 @@ public class PauseMenuController : MonoBehaviour
         IsPaused = true;
         pauseMenuUI.SetActive(true);
 
+        SetGameplayInputEnabled(false);
         Time.timeScale = 0f;
 
         Cursor.lockState = CursorLockMode.None;
@@ -58,6 +71,7 @@ public class PauseMenuController : MonoBehaviour
         pauseMenuUI.SetActive(false);
 
         Time.timeScale = 1f;
+        SetGameplayInputEnabled(true);
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;

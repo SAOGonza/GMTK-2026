@@ -47,3 +47,6 @@ MonoBehaviour:
   pauseMenuUI: {fileID: 0}
   sceneFade: {fileID: 0}
   mainMenuSceneName: Main_Menu
+  gameplayInputBehaviours:
+  - {fileID: 0}
+  - {fileID: 0}

@@ -1219,6 +1219,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1657680417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3647596741142680260, guid: 274e88a046e73604db39772132053b6d, type: 3}
+  m_PrefabInstance: {fileID: 6082446357953833888}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
 --- !u!1001 &1658920935
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1433,10 +1444,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: waterSurface
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 330585546}
@@ -1508,6 +1515,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8e037867e85fdc4ba24316dc8af5057, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
+--- !u!114 &11213666233966395 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+  m_PrefabInstance: {fileID: 11213666233966391}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd861962345db744c92998bc0c5c0108, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
 --- !u!1001 &1547160626545939595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1987,6 +2005,14 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1294373748}
+    - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
+      propertyPath: 'gameplayInputBehaviours.Array.data[0]'
+      value: 
+      objectReference: {fileID: 1657680417}
+    - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
+      propertyPath: 'gameplayInputBehaviours.Array.data[1]'
+      value: 
+      objectReference: {fileID: 11213666233966395}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

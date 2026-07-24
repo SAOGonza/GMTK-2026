@@ -170,8 +170,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Player
   moveSpeed: 5
   swimSpeed: 3
-  riseSpeed: 3
-  sinkSpeed: 1
+  swimBoostMultiplier: 1.35
+  idleBeforeSinking: 2
+  riseAcceleration: 2
+  sinkAcceleration: 1.5
+  maxRiseSpeed: 2.5
+  maxSinkSpeed: 1.5
   cameraTransform: {fileID: 0}
   gravity: -20
   groundedForce: -1
