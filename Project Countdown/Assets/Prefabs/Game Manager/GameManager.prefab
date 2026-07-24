@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e0978f41ca06b4493fc21bcb5d5f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfectionEffectsController
+  gameManager: {fileID: 986510084061272922}
   gameTimer: {fileID: 3356235219335088047}
   player: {fileID: 0}
   infectionOverlay: {fileID: 0}
@@ -97,6 +98,11 @@ MonoBehaviour:
   backToMenuButton: {fileID: 0}
   sceneFade: {fileID: 0}
   mainMenuSceneName: Main_Menu
+  victoryScreen: {fileID: 0}
+  victoryBackToMenuButton: {fileID: 0}
+  victoryClip: {fileID: 0}
+  victoryFadeDuration: 2
+  victoryButtonDelay: 2
   pauseMenuController: {fileID: 0}
 --- !u!114 &3778107276019592119
 MonoBehaviour:

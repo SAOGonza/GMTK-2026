@@ -5,6 +5,7 @@ using UnityEngine;
 public class InfectionEffectsController : MonoBehaviour
 {
     [Header("Systems")]
+    [SerializeField] private GameManager gameManager;
     [SerializeField] private GameTimer gameTimer;
     [SerializeField] private Player player;
 
@@ -46,6 +47,13 @@ public class InfectionEffectsController : MonoBehaviour
     [SerializeField] private SceneFade sceneFade;
     [SerializeField] private string mainMenuSceneName = "Main_Menu";
 
+    [Header("Victory")]
+    [SerializeField] private CanvasGroup victoryScreen;
+    [SerializeField] private GameObject victoryBackToMenuButton;
+    [SerializeField] private AudioClip victoryClip;
+    [SerializeField] private float victoryFadeDuration = 2f;
+    [SerializeField] private float victoryButtonDelay = 2f;
+
     [SerializeField] private PauseMenuController pauseMenuController;
 
     private bool triggered75;
@@ -70,6 +78,64 @@ public class InfectionEffectsController : MonoBehaviour
 
         if (backToMenuButton != null)
             backToMenuButton.SetActive(false);
+
+        if (victoryScreen != null)
+        {
+            victoryScreen.alpha = 0f;
+            victoryScreen.blocksRaycasts = false;
+            victoryScreen.interactable = false;
+        }
+
+        if (victoryBackToMenuButton != null)
+            victoryBackToMenuButton.SetActive(false);
+    }
+
+    public void PlayVictorySequence()
+    {
+        StartCoroutine(VictorySequence());
+    }
+
+    private IEnumerator VictorySequence()
+    {
+        RestoreTemporaryEffects();
+
+        pauseMenuController?.CloseForGameOver();
+
+        player?.SetMovementSpeedMultiplier(0f);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+
+        if (victoryScreen != null)
+        {
+            victoryScreen.blocksRaycasts = true;
+            victoryScreen.interactable = true;
+        }
+
+        if (victoryClip != null && audioSource != null)
+            audioSource.PlayOneShot(victoryClip);
+
+        float elapsed = 0f;
+
+        while (elapsed < victoryFadeDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+
+            float fadeAmount = Mathf.Clamp01(elapsed / victoryFadeDuration);
+
+            if (victoryScreen != null)
+                victoryScreen.alpha = fadeAmount;
+
+            yield return null;
+        }
+
+        if (victoryScreen != null)
+            victoryScreen.alpha = 1f;
+
+        yield return new WaitForSecondsRealtime(victoryButtonDelay);
+
+        if (victoryBackToMenuButton != null)
+            victoryBackToMenuButton.SetActive(true);
     }
 
     private void OnEnable()
@@ -78,6 +144,9 @@ public class InfectionEffectsController : MonoBehaviour
         {
             gameTimer.OnGaugeChanged += HandleGaugeChanged;
         }
+
+        if (gameManager != null)
+            gameManager.OnGameWon += PlayVictorySequence;
     }
 
     private void Start()
@@ -94,6 +163,9 @@ public class InfectionEffectsController : MonoBehaviour
         {
             gameTimer.OnGaugeChanged -= HandleGaugeChanged;
         }
+
+        if (gameManager != null)
+            gameManager.OnGameWon -= PlayVictorySequence;
     }
 
     private void HandleGaugeChanged(float gaugeValue)

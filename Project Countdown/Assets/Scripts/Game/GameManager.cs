@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class GameManager : MonoBehaviour
     public bool IsGameActive => CurrentState == GameState.Playing;
 
     public float Oxygen = 100f;
+
+    public event Action OnGameWon;
 
     private void Awake()
     {
@@ -61,5 +64,7 @@ public class GameManager : MonoBehaviour
         CurrentState = GameState.Won;
 
         Debug.Log("The player overloaded the mech core.");
+
+        OnGameWon?.Invoke();
     }
 }
