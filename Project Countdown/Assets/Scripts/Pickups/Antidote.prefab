@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5816896087572303358}
   - component: {fileID: 6288903554611093674}
   - component: {fileID: 7047873707011921585}
+  - component: {fileID: 1760721873801478039}
   - component: {fileID: 838763156659417938}
   m_Layer: 6
   m_Name: Antidote
@@ -31,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.985, y: 1, z: 3.5}
-  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -43,7 +44,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 692515611820727064}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -2448420090160389373, guid: 339a76f90b1b838499fd00fa5a37a941, type: 3}
 --- !u!23 &5816896087572303358
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -69,7 +70,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: efa2d1fd63059554ea8df37363491895, type: 2}
+  - {fileID: 2100000, guid: 8b18d633d56cf354a9ab78c6f1dedf9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,10 +113,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.6656393
+  m_Height: 3.9403534
+  m_Direction: 2
+  m_Center: {x: 0, y: 0.04603535, z: -0.03583749}
 --- !u!114 &7047873707011921585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +131,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AntidotePickup
   pickupData: {fileID: 11400000, guid: 6a4f8b887e4f4b243b9ba87d84337611, type: 2}
   gameTimer: {fileID: 0}
+--- !u!114 &1760721873801478039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 692515611820727064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a2f48cea1dda846b9e6177ec3d1e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatePickupController
+  rotationSpeed: 50
 --- !u!82 &838763156659417938
 AudioSource:
   m_ObjectHideFlags: 0
