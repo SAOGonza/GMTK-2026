@@ -1882,26 +1882,14 @@ PrefabInstance:
       propertyPath: gameTimer
       value: 
       objectReference: {fileID: 2023836363}
-    - target: {fileID: 3442769633209408156, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1153788614}
     - target: {fileID: 4160483018541475266, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 408736422}
-    - target: {fileID: 5895109829980555471, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1153788614}
     - target: {fileID: 6176647610855489311, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 7518132633514700827, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1153788614}
     - target: {fileID: 7880406434867891192, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
