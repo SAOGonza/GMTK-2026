@@ -5,6 +5,11 @@ public class BreathingBehavior : MonoBehaviour
     private bool underwater;
     private bool hasDrowned;
 
+    [Header("Audio")]
+    [SerializeField] AudioSource audioSource;
+    [SerializeField] AudioClip submergeClip;
+    [SerializeField] AudioClip emergeClip;
+
     [Header("Oxygen")]
     [SerializeField] private float oxygenDrainRate = 10f;
     [SerializeField] private float oxygenRecoveryRate = 100f;
@@ -40,11 +45,19 @@ public class BreathingBehavior : MonoBehaviour
             GameManager.Instance.Oxygen -= Time.deltaTime * oxygenDrainRate;
             GameManager.Instance.Oxygen = Mathf.Max(0f, GameManager.Instance.Oxygen);
 
+            // Play underwater sounds.
+            if (!audioSource.isPlaying)
+                audioSource.Play();
+
             CheckForDrowning();
         }
 
         else
         {
+            // Stop underwater sounds.
+            if (audioSource.isPlaying)
+                audioSource.Stop();
+
             GameManager.Instance.Oxygen += Time.deltaTime * oxygenRecoveryRate;
             GameManager.Instance.Oxygen = Mathf.Min(100f, GameManager.Instance.Oxygen);
         }
