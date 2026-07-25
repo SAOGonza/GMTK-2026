@@ -28,6 +28,13 @@ public class Player : MonoBehaviour
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float groundedForce = -2f;
 
+    [Header("Game Timer")]
+    [SerializeField] GameTimer gameTimer;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip antidoteConsumeSFX;
+
     private float verticalVelocity;
 
     public CharacterController CharacterController { get; private set; }
@@ -63,6 +70,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         ReadMovementInput();
+        ReadAntidoteInput();
 
         StateMachine.CurrentState?.Update();
     }
@@ -87,6 +95,41 @@ public class Player : MonoBehaviour
             MoveInput += Vector2.right;
 
         MoveInput = Vector2.ClampMagnitude(MoveInput, 1f);
+    }
+
+    private void ReadAntidoteInput()
+    {
+        if (Keyboard.current == null)
+            return;
+
+        if (Keyboard.current.digit1Key.isPressed)
+        {
+            PlayerInventory inventory = GetComponent<PlayerInventory>();
+
+            if (inventory == null)
+            {
+                Debug.LogError("Missing PlayerInventory component.");
+                return;
+            }
+
+            if (inventory.AntidoteCount > 0)
+            {
+                inventory.RemoveAntidote(1);
+
+                // Apply the antidote and stop the infection timer.
+                if (gameTimer == null)
+                    gameTimer = FindAnyObjectByType<GameTimer>();
+
+                if (gameTimer == null)
+                {
+                    Debug.LogWarning("Player could not find a GameTimer.");
+                    return;
+                }
+
+                audioSource.PlayOneShot(antidoteConsumeSFX);
+                gameTimer.ApplyAntidote();
+            }
+        }
     }
 
     public void Move()

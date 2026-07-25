@@ -85,6 +85,7 @@ MonoBehaviour:
   stage50Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
   stage25Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
   transformationClip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
+  drownedClip: {fileID: 8300000, guid: 4f3b01aefc7cb6444a44cf892c0e2898, type: 3}
   impulseSource: {fileID: 3778107276019592119}
   stage75Duration: 6
   stage75OverlayStrength: 0.3

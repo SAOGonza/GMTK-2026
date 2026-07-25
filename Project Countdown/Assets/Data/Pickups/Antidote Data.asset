@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Antidote Data
   m_EditorClassIdentifier: Assembly-CSharp::PickupData
   pickupName: Antidote
+  description: Stops the infection process for 25 seconds.
   pickupVFX: {fileID: 0}
+  pickupSFX: {fileID: 0}

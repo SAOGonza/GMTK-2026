@@ -20,13 +20,14 @@ public class Pickup : MonoBehaviour, IInteractable
             if (pickupData == null)
                 return "Press E to pick up";
 
-            return $"Press E to pick up {pickupData.PickupName}";
+            return $"Press E to pick up {pickupData.PickupName}" + $"\n\n{pickupData.Description}";
         }
     }
 
     public virtual void Interact(Player player)
     {
         SpawnPickupVFX();
+        PlayPickupSFX();
         Destroy(gameObject);
     }
 
@@ -36,5 +37,13 @@ public class Pickup : MonoBehaviour, IInteractable
             return;
 
         Instantiate(pickupData.PickupVFX, transform.position, Quaternion.identity);
+    }
+
+    private void PlayPickupSFX()
+    {
+        if (pickupData == null || pickupData.PickupSFX == null)
+            return;
+
+        AudioSource.PlayClipAtPoint(pickupData.PickupSFX, transform.position);
     }
 }
