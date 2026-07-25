@@ -98,7 +98,8 @@ public class InfectionEffectsController : MonoBehaviour
 
     public void PlayDrownedSequence()
     {
-        StartCoroutine(DrownedSequence());
+        if (!triggeredZero)
+            StartCoroutine(DrownedSequence());
     }
 
     private IEnumerator VictorySequence()
