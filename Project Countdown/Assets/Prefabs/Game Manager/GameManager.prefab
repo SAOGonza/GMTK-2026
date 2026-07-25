@@ -101,7 +101,7 @@ MonoBehaviour:
   mainMenuSceneName: Main_Menu
   victoryScreen: {fileID: 0}
   victoryBackToMenuButton: {fileID: 0}
-  victoryClip: {fileID: 0}
+  victoryClip: {fileID: 8300000, guid: 5e48fec59252fb447b14b57b5432994c, type: 3}
   victoryFadeDuration: 2
   victoryButtonDelay: 2
   pauseMenuController: {fileID: 0}
