@@ -544,6 +544,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5627060627492744907, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: bubblesParticles
+      value: 
+      objectReference: {fileID: 2135328159}
     - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: playerCamera
       value: 
@@ -2809,6 +2813,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 21.192, z: 0}
+--- !u!1 &2135328159 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2469657217717273779, guid: 274e88a046e73604db39772132053b6d, type: 3}
+  m_PrefabInstance: {fileID: 2001047726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
