@@ -1609,6 +1609,14 @@ PrefabInstance:
       propertyPath: playerInventory
       value: 
       objectReference: {fileID: 408736422}
+    - target: {fileID: 5533988454471536028, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+      propertyPath: 'gameplayInputBehaviours.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2001047727}
+    - target: {fileID: 5533988454471536028, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+      propertyPath: 'gameplayInputBehaviours.Array.data[1]'
+      value: 
+      objectReference: {fileID: 408736424}
     - target: {fileID: 6176647610855489311, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
       propertyPath: m_Name
       value: GameplayCanvas
