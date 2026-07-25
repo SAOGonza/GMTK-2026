@@ -33,7 +33,9 @@ public class Player : MonoBehaviour
 
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
-    [SerializeField] private AudioClip antidoteConsumeSFX;
+    [SerializeField] private AudioClip[] antidoteConsumeSFX;
+
+    private PlayerInventory inventory;
 
     private float verticalVelocity;
 
@@ -54,6 +56,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         CharacterController = GetComponent<CharacterController>();
+        inventory = GetComponent<PlayerInventory>();
 
         StateMachine = new PlayerStateMachine();
 
@@ -99,37 +102,29 @@ public class Player : MonoBehaviour
 
     private void ReadAntidoteInput()
     {
-        if (Keyboard.current == null)
+        if (Keyboard.current == null || !Keyboard.current.digit1Key.wasPressedThisFrame)
             return;
 
-        if (Keyboard.current.digit1Key.isPressed)
-        {
-            PlayerInventory inventory = GetComponent<PlayerInventory>();
+        if (
+            gameTimer == null ||
+            gameTimer.IsAntidoteActive ||
+            inventory == null ||
+            inventory.AntidoteCount <= 0
+        )
+            return;
 
-            if (inventory == null)
-            {
-                Debug.LogError("Missing PlayerInventory component.");
-                return;
-            }
+        inventory.RemoveAntidote(1);
+        PlayAntidoteSound();
+        gameTimer.ApplyAntidote();
+    }
 
-            if (inventory.AntidoteCount > 0)
-            {
-                inventory.RemoveAntidote(1);
+    private void PlayAntidoteSound()
+    {
+        if (audioSource == null || antidoteConsumeSFX == null || antidoteConsumeSFX.Length == 0)
+            return;
 
-                // Apply the antidote and stop the infection timer.
-                if (gameTimer == null)
-                    gameTimer = FindAnyObjectByType<GameTimer>();
-
-                if (gameTimer == null)
-                {
-                    Debug.LogWarning("Player could not find a GameTimer.");
-                    return;
-                }
-
-                audioSource.PlayOneShot(antidoteConsumeSFX);
-                gameTimer.ApplyAntidote();
-            }
-        }
+        int randomIndex = Random.Range(0, antidoteConsumeSFX.Length);
+        audioSource.PlayOneShot(antidoteConsumeSFX[randomIndex]);
     }
 
     public void Move()

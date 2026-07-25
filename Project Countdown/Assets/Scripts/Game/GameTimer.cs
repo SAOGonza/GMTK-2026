@@ -11,6 +11,7 @@ public class GameTimer : MonoBehaviour
     [SerializeField] private float antidotePauseDuration = 25f;
 
     private float antidoteTimeRemaining;
+    public bool IsAntidoteActive => antidoteTimeRemaining > 0f;
 
     public float CurrentGauge { get; private set; } = 1f;
 
