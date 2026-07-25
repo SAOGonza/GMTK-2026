@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8145238637921176589}
   - component: {fileID: 5553484472798126542}
   - component: {fileID: 7992088714462730211}
+  - component: {fileID: 1882087914686636057}
   m_Layer: 6
   m_Name: PowerCell
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: 3.5}
-  m_LocalScale: {x: 0.3, y: 0.2, z: 0.3}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4270722874888972093}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -3651623175212913128, guid: a88421ae68e1331449ea00144e4be831, type: 3}
 --- !u!23 &8145238637921176589
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af36cd848c1ac7b408766682c8c40177, type: 2}
+  - {fileID: 2100000, guid: 647dbeff9cddff54d9356c0c14ba64f2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,9 +113,9 @@ CapsuleCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Height: 2.3519893
+  m_Direction: 2
+  m_Center: {x: 0, y: -3.3425355e-16, z: 0.12600718}
 --- !u!114 &7992088714462730211
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PowerCellPickup
   pickupData: {fileID: 11400000, guid: 3643f870e6a449a47919c4aaf1068fa5, type: 2}
+--- !u!114 &1882087914686636057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4270722874888972093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a2f48cea1dda846b9e6177ec3d1e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatePickupController
+  rotationSpeed: 50

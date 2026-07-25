@@ -300,7 +300,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cfaa0b8fc390d43aa77a23f53229ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
-  requiredPowerCells: 10
+  requiredPowerCells: 5
 --- !u!114 &5643253776278841209
 MonoBehaviour:
   m_ObjectHideFlags: 0
