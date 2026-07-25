@@ -491,6 +491,14 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1237043550}
+    - target: {fileID: 3888869966706169620, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3888869966706169620, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4902862958743838899, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.75
@@ -535,6 +543,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5315553339124712654, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627060627492744907, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: bubblesParticles
+      value: 
+      objectReference: {fileID: 2001047728}
     - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: playerCamera
       value: 
@@ -2219,6 +2235,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineCamera
+--- !u!1 &2001047728 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2469657217717273779, guid: 274e88a046e73604db39772132053b6d, type: 3}
+  m_PrefabInstance: {fileID: 2001047726}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2023836362
 PrefabInstance:
   m_ObjectHideFlags: 0

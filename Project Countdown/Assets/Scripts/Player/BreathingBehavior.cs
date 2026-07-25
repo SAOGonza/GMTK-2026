@@ -14,6 +14,9 @@ public class BreathingBehavior : MonoBehaviour
     [SerializeField] private float oxygenDrainRate = 10f;
     [SerializeField] private float oxygenRecoveryRate = 100f;
 
+    [Header("Bubbles Particles")]
+    [SerializeField] GameObject bubblesParticles;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Water"))
@@ -49,6 +52,10 @@ public class BreathingBehavior : MonoBehaviour
             if (!audioSource.isPlaying)
                 audioSource.Play();
 
+            // Show bubbles in front of player while underwater.
+            if (!bubblesParticles.activeSelf)
+                bubblesParticles.SetActive(true);
+
             CheckForDrowning();
         }
 
@@ -57,6 +64,10 @@ public class BreathingBehavior : MonoBehaviour
             // Stop underwater sounds.
             if (audioSource.isPlaying)
                 audioSource.Stop();
+
+            // Stop bubbles when we emerge to the surface.
+            if (bubblesParticles.activeSelf)
+                bubblesParticles.SetActive(false);
 
             GameManager.Instance.Oxygen += Time.deltaTime * oxygenRecoveryRate;
             GameManager.Instance.Oxygen = Mathf.Min(100f, GameManager.Instance.Oxygen);
