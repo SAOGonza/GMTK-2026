@@ -1861,6 +1861,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2375845737301724986, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6068289096000305907, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
       propertyPath: m_Name
       value: SM_goober (4)
@@ -1905,7 +1909,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -173.892
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3112199419931214771, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
+    - {fileID: 2375845737301724986, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4692,6 +4698,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2375845737301724986, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6068289096000305907, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
       propertyPath: m_Name
       value: SM_goober (5)
@@ -4736,7 +4746,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -207.346
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3112199419931214771, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
+    - {fileID: 2375845737301724986, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4933,6 +4945,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2375845737301724986, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
+      propertyPath: OnInteract.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6068289096000305907, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
       propertyPath: m_Name
       value: SM_goober (3)
@@ -4977,7 +4993,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -177.363
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3112199419931214771, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
+    - {fileID: 2375845737301724986, guid: 1e97d8c1b65bdc148b21c4bcffaf6607, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -8758,6 +8776,10 @@ PrefabInstance:
     - target: {fileID: 5750489325963671763, guid: c23c88e21e67dab4d8d1a7f143d8ff82, type: 3}
       propertyPath: m_Name
       value: goober
+      objectReference: {fileID: 0}
+    - target: {fileID: 5750489325963671763, guid: c23c88e21e67dab4d8d1a7f143d8ff82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
