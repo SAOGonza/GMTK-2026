@@ -7047,18 +7047,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 408736422}
     - target: {fileID: 5533988454471536028, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-      propertyPath: quitSound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533988454471536028, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-      propertyPath: audioSource
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533988454471536028, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-      propertyPath: buttonSound
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 5533988454471536028, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
       propertyPath: 'gameplayInputBehaviours.Array.data[0]'
       value: 
       objectReference: {fileID: 2001047727}

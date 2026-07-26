@@ -48,7 +48,10 @@ public class PauseMenuController : MonoBehaviour
         else
         {
             if (IsPaused)
+            {
+                audioSource.PlayOneShot(buttonSound);
                 ResumeGame();
+            }
             else
                 PauseGame();
         }
@@ -85,7 +88,6 @@ public class PauseMenuController : MonoBehaviour
 
     public void ResumeGame()
     {
-        audioSource.PlayOneShot(buttonSound);
         IsPaused = false;
 
         pauseMenuUI.SetActive(false);
