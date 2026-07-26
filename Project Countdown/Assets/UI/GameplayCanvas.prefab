@@ -1750,9 +1750,9 @@ MonoBehaviour:
   gameplayInputBehaviours:
   - {fileID: 0}
   - {fileID: 0}
-  audioSource: {fileID: 0}
-  buttonSound: {fileID: 0}
-  quitSound: {fileID: 0}
+  audioSource: {fileID: 6472373279453408437}
+  buttonSound: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
+  quitSound: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
 --- !u!114 &2605728006317627787
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3174,14 +3174,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5533988454471536028}
+    - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 5533988454471536028}
     - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
@@ -3193,8 +3201,20 @@ PrefabInstance:
       value: ResumeGame
       objectReference: {fileID: 0}
     - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Beep
+      objectReference: {fileID: 0}
+    - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
       value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseMenuController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 999894273011235541, guid: 66984fe941f952143ae9bf367e7df0c8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
