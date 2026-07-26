@@ -15,4 +15,4 @@ MonoBehaviour:
   pickupName: Power Cell
   description: Used to overload the power core.
   pickupVFX: {fileID: 0}
-  pickupSFX: {fileID: 0}
+  pickupSFX: {fileID: 8300000, guid: 1e40ada3861b41a4dae2b4af6a20a618, type: 3}
