@@ -5656,7 +5656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e7c5614b19f7624db41d66b8bced9f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuController
-  gameSceneName: Game_Level
+  gameSceneName: Intro
   sceneFade: {fileID: 618965493}
   audioSource: {fileID: 618965494}
   playSound: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
