@@ -1,9 +1,14 @@
 fileFormatVersion: 2
-guid: f8b03fcb92eafe1498bbfb3745890012
+guid: 214d675d519b9934487c1a824804c9c1
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mat_AppleGoober
+    second: {fileID: 2100000, guid: b86b2610ba66b6a418624a8fec5e0212, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

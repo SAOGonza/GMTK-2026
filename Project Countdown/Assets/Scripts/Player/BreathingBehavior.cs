@@ -53,7 +53,7 @@ public class BreathingBehavior : MonoBehaviour
                 audioSource.Play();
 
             // Show bubbles in front of player while underwater.
-            if (!bubblesParticles.activeSelf)
+            if (bubblesParticles && !bubblesParticles.activeSelf)
                 bubblesParticles.SetActive(true);
 
             CheckForDrowning();
@@ -66,7 +66,7 @@ public class BreathingBehavior : MonoBehaviour
                 audioSource.Stop();
 
             // Stop bubbles when we emerge to the surface.
-            if (bubblesParticles.activeSelf)
+            if (bubblesParticles && bubblesParticles.activeSelf)
                 bubblesParticles.SetActive(false);
 
             GameManager.Instance.Oxygen += Time.deltaTime * oxygenRecoveryRate;
