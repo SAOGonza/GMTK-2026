@@ -14,6 +14,11 @@ public class PauseMenuController : MonoBehaviour
     [Header("Gameplay Input")]
     [SerializeField] private Behaviour[] gameplayInputBehaviours;
 
+    [Header("Sound")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip buttonSound;
+    [SerializeField] private AudioClip quitSound;
+
     public bool IsPaused { get; private set; }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -73,8 +78,14 @@ public class PauseMenuController : MonoBehaviour
         Cursor.visible = true;
     }
 
+    public void Beep()
+    {
+        audioSource.PlayOneShot(buttonSound);
+    }
+
     public void ResumeGame()
     {
+        audioSource.PlayOneShot(buttonSound);
         IsPaused = false;
 
         pauseMenuUI.SetActive(false);
@@ -88,6 +99,8 @@ public class PauseMenuController : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
+        audioSource.PlayOneShot(buttonSound);
+        audioSource.PlayOneShot(quitSound);
         if (sceneFade.IsFading)
             return;
 
@@ -98,6 +111,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void QuitGame()
     {
+        audioSource.PlayOneShot(quitSound);
         Time.timeScale = 1f;
         Application.Quit();
 
