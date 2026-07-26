@@ -81,18 +81,18 @@ MonoBehaviour:
   infectionOverlay: {fileID: 0}
   gameOverScreen: {fileID: 0}
   audioSource: {fileID: 4473099936945901473}
-  stage75Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
-  stage50Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
-  stage25Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
+  stage75Clip: {fileID: 8300000, guid: b3193f2beb53215479049a3664bcc452, type: 3}
+  stage50Clip: {fileID: 8300000, guid: e355f9493d22ddc4482236a82a5787c7, type: 3}
+  stage25Clip: {fileID: 8300000, guid: 52c513e7d0bc9a5419c23a8bc47d089a, type: 3}
   transformationClip: {fileID: 8300000, guid: b0d8c36a9f0513c4287409fdd094b744, type: 3}
   drownedClip: {fileID: 8300000, guid: 4f3b01aefc7cb6444a44cf892c0e2898, type: 3}
   impulseSource: {fileID: 3778107276019592119}
-  stage75Duration: 6
+  stage75Duration: 8
   stage75OverlayStrength: 0.3
-  stage50Duration: 6
+  stage50Duration: 11
   stage50OverlayStrength: 0.6
-  stage25Duration: 6
-  stage25OverlayStrength: 0.8
+  stage25Duration: 15
+  stage25OverlayStrength: 0.85
   stumbleSpeedMultiplier: 0.4
   gameOverFadeDuration: 1
   backToMenuDelay: 2
@@ -243,7 +243,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 82c26c9dd87bd7c4eb386097b169e1a7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.72
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
