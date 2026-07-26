@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class AntidotePickup : Pickup
 {
-    [SerializeField] private GameTimer gameTimer;
+    //[SerializeField] private GameTimer gameTimer;
 
     public override void Interact(Player player)
     {
