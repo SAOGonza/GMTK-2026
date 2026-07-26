@@ -942,6 +942,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 307968193}
   m_LocalEulerAnglesHint: {x: -180, y: 0, z: 0}
+--- !u!1 &901444590 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4001727245703511324, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+  m_PrefabInstance: {fileID: 1907160434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1064024093
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1059,6 +1064,10 @@ PrefabInstance:
       propertyPath: pauseMenuUI
       value: 
       objectReference: {fileID: 1907160437}
+    - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
+      propertyPath: settingsMenuUI
+      value: 
+      objectReference: {fileID: 901444590}
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: 'gameplayInputBehaviours.Array.data[0]'
       value: 
