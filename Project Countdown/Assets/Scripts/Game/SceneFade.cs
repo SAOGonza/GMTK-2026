@@ -69,6 +69,6 @@ public class SceneFade : MonoBehaviour
 
         fadeOverlay.alpha = 1f;
         Time.timeScale = 1f;
-        SceneManager.LoadScene(sceneName);
+        SceneManager.LoadSceneAsync(sceneName);
     }
 }

@@ -13,10 +13,21 @@ public class MainMenuController : MonoBehaviour
     [SerializeField] private AudioClip playSound;
     [SerializeField] private AudioClip quitSound;
 
+    private void Start()
+    {
+        if (PlayerPrefs.HasKey("Volume")) AudioListener.volume = PlayerPrefs.GetFloat("Volume");
+    }
+
     public void PlayGame()
     {
         audioSource.PlayOneShot(playSound);
         sceneFade.LoadScene(gameSceneName);
+    }
+
+    public void LoadScene(string name)
+    {
+        audioSource.PlayOneShot(playSound);
+        sceneFade.LoadScene(name);
     }
 
     public void QuitGame()

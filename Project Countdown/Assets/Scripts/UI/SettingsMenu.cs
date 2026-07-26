@@ -43,7 +43,7 @@ public class SettingsMenu : MonoBehaviour
         print("Set bloom to " + PlayerPrefs.GetInt("Bloom"));
         PlayerPrefs.Save();
         if (PlayerPrefs.HasKey("Volume")) AudioListener.volume = PlayerPrefs.GetFloat("Volume");
-        PostProcessingSetting.Instance.ApplySettings();
+        if (PostProcessingSetting.Instance) PostProcessingSetting.Instance.ApplySettings();
     }
 
     // Update is called once per frame
