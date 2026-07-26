@@ -1144,11 +1144,7 @@ PrefabInstance:
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: settingsMenuUI
       value: 
-<<<<<<< Updated upstream
       objectReference: {fileID: 901444590}
-=======
-      objectReference: {fileID: 1912431464}
->>>>>>> Stashed changes
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: 'gameplayInputBehaviours.Array.data[0]'
       value: 
