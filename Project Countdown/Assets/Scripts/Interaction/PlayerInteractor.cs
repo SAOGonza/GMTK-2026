@@ -1,4 +1,3 @@
-using NUnit.Framework.Constraints;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -16,6 +15,7 @@ public class PlayerInteractor : MonoBehaviour
     [Header("Voice Lines")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] pickupVoiceLines;
+    [SerializeField] private AudioClip[] powerCellPickupVoiceLines;
 
     private Player player;
 
@@ -77,16 +77,34 @@ public class PlayerInteractor : MonoBehaviour
 
     private void HandleInteractionInput()
     {
-        if (currentInteractable == null || Keyboard.current == null)
+        if (currentInteractable == null || Keyboard.current == null || !Keyboard.current.eKey.wasPressedThisFrame)
             return;
 
-        if (Keyboard.current.eKey.wasPressedThisFrame)
-        {
-            int index = Random.Range(0, pickupVoiceLines.Length);
+        int index = Random.Range(0, pickupVoiceLines.Length);
 
-            audioSource.PlayOneShot(pickupVoiceLines[index]);
-            currentInteractable.Interact(player);
+
+        if (currentInteractable is PowerCellPickup)
+            PlayRandomVoiceLine(powerCellPickupVoiceLines);
+        else
+            PlayRandomVoiceLine(pickupVoiceLines);
+
+
+        currentInteractable.Interact(player);
+    }
+
+    private void PlayRandomVoiceLine(AudioClip[] voiceLines)
+    {
+        if (
+            audioSource == null ||
+            voiceLines == null ||
+            voiceLines.Length == 0
+        )
+        {
+            return;
         }
+
+        int randomIndex = Random.Range(0, voiceLines.Length);
+        audioSource.PlayOneShot(voiceLines[randomIndex]);
     }
 
     private void ShowPrompt(string message)

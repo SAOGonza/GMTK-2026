@@ -328,6 +328,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 2c4e063085f9d8348b81626f1240fcec, type: 3}
   - {fileID: 8300000, guid: 4855f6cf886fc08488592ba90b39a139, type: 3}
   - {fileID: 8300000, guid: cb1e6a2207fa9ef4cb1095eae27150c9, type: 3}
+  powerCellPickupVoiceLines:
+  - {fileID: 8300000, guid: 07f7307c8568e994fbd2abc00d451f5d, type: 3}
+  - {fileID: 8300000, guid: 4e233fb1b8f21b34996697056c98b8ce, type: 3}
+  - {fileID: 8300000, guid: a6a9268770f11e24da02ee027a221f15, type: 3}
 --- !u!114 &4965651303045992136
 MonoBehaviour:
   m_ObjectHideFlags: 0
