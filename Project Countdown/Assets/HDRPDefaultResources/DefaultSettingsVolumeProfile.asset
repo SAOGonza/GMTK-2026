@@ -1,0 +1,1176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8770122170507510650
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a76fd08475e21554b8f284f723dd7cf8, type: 3}
+  m_Name: WaterRendering
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  enable:
+    <fieldHash>k__BackingField: 439395984
+    m_OverrideState: 1
+    m_Value: 1
+  triangleSize:
+    <fieldHash>k__BackingField: 678746376
+    m_OverrideState: 0
+    m_Value: 30
+  ambientProbeDimmer:
+    <fieldHash>k__BackingField: 918096768
+    m_OverrideState: 0
+    m_Value: 1
+--- !u!114 &-7089757308646879465
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf384b154398e341b6b29969c078198, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  quality:
+    <fieldHash>k__BackingField: -1914088656
+    m_OverrideState: 1
+    m_Value: 1
+  intensity:
+    <fieldHash>k__BackingField: 452735744
+    m_OverrideState: 1
+    m_Value: 0.5
+  maximumVelocity:
+    <fieldHash>k__BackingField: 692086136
+    m_OverrideState: 0
+    m_Value: 200
+  minimumVelocity:
+    <fieldHash>k__BackingField: 931436528
+    m_OverrideState: 0
+    m_Value: 2
+  cameraMotionBlur:
+    <fieldHash>k__BackingField: 1170786920
+    m_OverrideState: 0
+    m_Value: 1
+  specialCameraClampMode:
+    <fieldHash>k__BackingField: 1410137312
+    m_OverrideState: 0
+    m_Value: 0
+  cameraVelocityClamp:
+    <fieldHash>k__BackingField: -12625280
+    m_OverrideState: 0
+    m_Value: 0.05
+  cameraTranslationVelocityClamp:
+    <fieldHash>k__BackingField: 226725112
+    m_OverrideState: 0
+    m_Value: 0.05
+  cameraRotationVelocityClamp:
+    <fieldHash>k__BackingField: 466075504
+    m_OverrideState: 0
+    m_Value: 0.03
+  depthComparisonExtent:
+    <fieldHash>k__BackingField: 705425896
+    m_OverrideState: 0
+    m_Value: 1
+  m_SampleCount:
+    <fieldHash>k__BackingField: 944776288
+    m_OverrideState: 1
+    m_Value: 8
+--- !u!114 &-6026464391438864705
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7ff42a8c5be6646ad3975f3a54c1eb, type: 3}
+  m_Name: DiffusionProfileList
+  m_EditorClassIdentifier: 
+  active: 1
+  diffusionProfiles:
+    m_OverrideState: 1
+    m_Value:
+    - {fileID: 11400000, guid: 404820c4cf36ad944862fa59c56064f0, type: 2}
+    - {fileID: 11400000, guid: 2384dbf2c1c420f45a792fbc315fbfb1, type: 2}
+--- !u!114 &-1016694868962581565
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56b145d2b9ee1ac4f846968484e7485a, type: 3}
+  m_Name: ContactShadows
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  quality:
+    <fieldHash>k__BackingField: -433810720
+    m_OverrideState: 0
+    m_Value: 1
+  enable:
+    <fieldHash>k__BackingField: -1643902440
+    m_OverrideState: 1
+    m_Value: 1
+  directionalOnly:
+    <fieldHash>k__BackingField: -1165201656
+    m_OverrideState: 0
+    m_Value: 0
+  halfResolution:
+    <fieldHash>k__BackingField: -686500872
+    m_OverrideState: 0
+    m_Value: 0
+  length:
+    <fieldHash>k__BackingField: -447150480
+    m_OverrideState: 0
+    m_Value: 0.15
+  opacity:
+    <fieldHash>k__BackingField: -207800088
+    m_OverrideState: 0
+    m_Value: 1
+  distanceScaleFactor:
+    <fieldHash>k__BackingField: 1946353440
+    m_OverrideState: 0
+    m_Value: 0.5
+  maxDistance:
+    <fieldHash>k__BackingField: -2109263464
+    m_OverrideState: 0
+    m_Value: 50
+  minDistance:
+    <fieldHash>k__BackingField: -1869913072
+    m_OverrideState: 0
+    m_Value: 0
+  fadeDistance:
+    <fieldHash>k__BackingField: -1630562680
+    m_OverrideState: 0
+    m_Value: 5
+  fadeInDistance:
+    <fieldHash>k__BackingField: -1391212288
+    m_OverrideState: 0
+    m_Value: 0
+  rayBias:
+    <fieldHash>k__BackingField: -1151861896
+    m_OverrideState: 0
+    m_Value: 0.2
+  thicknessScale:
+    <fieldHash>k__BackingField: -912511504
+    m_OverrideState: 0
+    m_Value: 0.15
+  m_SampleCount:
+    <fieldHash>k__BackingField: -673161112
+    m_OverrideState: 0
+    m_Value: 10
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: DefaultSettingsVolumeProfile
+  m_EditorClassIdentifier: 
+  components: []
+--- !u!114 &448115243408767295
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59b6606ef2548734bb6d11b9d160bc7e, type: 3}
+  m_Name: HDRISky
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  rotation:
+    <fieldHash>k__BackingField: 1387614096
+    m_OverrideState: 0
+    m_Value: 0
+  skyIntensityMode:
+    <fieldHash>k__BackingField: -1949951632
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    <fieldHash>k__BackingField: -753199672
+    m_OverrideState: 1
+    m_Value: 11
+  multiplier:
+    <fieldHash>k__BackingField: -35148496
+    m_OverrideState: 0
+    m_Value: 1
+  upperHemisphereLuxValue:
+    <fieldHash>k__BackingField: 204201896
+    m_OverrideState: 1
+    m_Value: 0.4660715
+  upperHemisphereLuxColor:
+    <fieldHash>k__BackingField: 1234952368
+    m_OverrideState: 1
+    m_Value: {x: 0.18750614, y: 0.29181972, z: 0.5}
+  desiredLuxValue:
+    <fieldHash>k__BackingField: 1474302760
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    <fieldHash>k__BackingField: -1145211792
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    <fieldHash>k__BackingField: -905861400
+    m_OverrideState: 0
+    m_Value: 0
+  includeSunInBaking:
+    <fieldHash>k__BackingField: -666511008
+    m_OverrideState: 0
+    m_Value: 0
+  m_SkyVersion: 1
+  enableDistortion:
+    <fieldHash>k__BackingField: -1617222920
+    m_OverrideState: 0
+    m_Value: 0
+  procedural:
+    <fieldHash>k__BackingField: -899171744
+    m_OverrideState: 0
+    m_Value: 1
+  scrollDirection:
+    <fieldHash>k__BackingField: -659821352
+    m_OverrideState: 0
+    m_Value: 0
+  m_ObsoleteScrollSpeed:
+    <fieldHash>k__BackingField: -420470960
+    m_OverrideState: 0
+    m_Value: 1
+  hdriSky:
+    <fieldHash>k__BackingField: -181120568
+    m_OverrideState: 1
+    m_Value: {fileID: 8900000, guid: 8253d41e6e8b11a4cbe77a4f8f82934d, type: 3}
+  distortionMode:
+    <fieldHash>k__BackingField: 58229824
+    m_OverrideState: 0
+    m_Value: 0
+  flowmap:
+    <fieldHash>k__BackingField: 297580216
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  upperHemisphereOnly:
+    <fieldHash>k__BackingField: 536930608
+    m_OverrideState: 0
+    m_Value: 1
+  scrollOrientation:
+    <fieldHash>k__BackingField: 776281000
+    m_OverrideState: 0
+    m_Value:
+      mode: 1
+      customValue: 0
+      additiveValue: 0
+      multiplyValue: 1
+  scrollSpeed:
+    <fieldHash>k__BackingField: 1015631392
+    m_OverrideState: 0
+    m_Value:
+      mode: 1
+      customValue: 100
+      additiveValue: 0
+      multiplyValue: 1
+  sunInitialRotation:
+    <fieldHash>k__BackingField: 1254981784
+    m_OverrideState: 0
+    m_Value: -Infinity
+  lockSun:
+    <fieldHash>k__BackingField: 1494332176
+    m_OverrideState: 0
+    m_Value: 0
+  enableBackplate:
+    <fieldHash>k__BackingField: 1733682568
+    m_OverrideState: 0
+    m_Value: 0
+  backplateType:
+    <fieldHash>k__BackingField: 1973032960
+    m_OverrideState: 0
+    m_Value: 0
+  groundLevel:
+    <fieldHash>k__BackingField: -793218952
+    m_OverrideState: 0
+    m_Value: 0
+  scale:
+    <fieldHash>k__BackingField: -75167776
+    m_OverrideState: 0
+    m_Value: {x: 32, y: 32}
+  projectionDistance:
+    <fieldHash>k__BackingField: 1360934576
+    m_OverrideState: 0
+    m_Value: 16
+  plateRotation:
+    <fieldHash>k__BackingField: 1600284968
+    m_OverrideState: 0
+    m_Value: 0
+  plateTexRotation:
+    <fieldHash>k__BackingField: 1839635360
+    m_OverrideState: 0
+    m_Value: 0
+  plateTexOffset:
+    <fieldHash>k__BackingField: 2078985752
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0}
+  blendAmount:
+    <fieldHash>k__BackingField: -61828016
+    m_OverrideState: 0
+    m_Value: 0
+  shadowTint:
+    <fieldHash>k__BackingField: 177522376
+    m_OverrideState: 0
+    m_Value:
+      r: 0.5
+      g: 0.5
+      b: 0.5
+      a: 1
+  pointLightShadow:
+    <fieldHash>k__BackingField: 416872768
+    m_OverrideState: 0
+    m_Value: 0
+  dirLightShadow:
+    <fieldHash>k__BackingField: 1134923944
+    m_OverrideState: 0
+    m_Value: 0
+  rectLightShadow:
+    <fieldHash>k__BackingField: -1723941000
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &1501199423866068322
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24f077503be6ae942a1e1245dbd53ea9, type: 3}
+  m_Name: Bloom
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  quality:
+    <fieldHash>k__BackingField: -391553752
+    m_OverrideState: 1
+    m_Value: 1
+  threshold:
+    <fieldHash>k__BackingField: 1509909624
+    m_OverrideState: 0
+    m_Value: 0
+  intensity:
+    <fieldHash>k__BackingField: 1749260016
+    m_OverrideState: 1
+    m_Value: 0.2
+  scatter:
+    <fieldHash>k__BackingField: 1988610408
+    m_OverrideState: 0
+    m_Value: 0.7
+  tint:
+    <fieldHash>k__BackingField: -2067006496
+    m_OverrideState: 0
+    m_Value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  dirtTexture:
+    <fieldHash>k__BackingField: -1827656104
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  dirtIntensity:
+    <fieldHash>k__BackingField: -1588305712
+    m_OverrideState: 0
+    m_Value: 0
+  anamorphic:
+    <fieldHash>k__BackingField: -1348955320
+    m_OverrideState: 0
+    m_Value: 1
+  m_Resolution:
+    <fieldHash>k__BackingField: -1109604928
+    m_OverrideState: 1
+    m_Value: 2
+  m_HighQualityPrefiltering:
+    <fieldHash>k__BackingField: -870254536
+    m_OverrideState: 1
+    m_Value: 0
+  m_HighQualityFiltering:
+    <fieldHash>k__BackingField: -630904144
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &1932259527246508038
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d7593b3a9277ac4696b20006c21dde2, type: 3}
+  m_Name: VisualEnvironment
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  m_Version: 1
+  skyType:
+    <fieldHash>k__BackingField: 1225314424
+    m_OverrideState: 1
+    m_Value: 1
+  cloudType:
+    <fieldHash>k__BackingField: 1464664816
+    m_OverrideState: 0
+    m_Value: 0
+  skyAmbientMode:
+    <fieldHash>k__BackingField: 1704015208
+    m_OverrideState: 0
+    m_Value: 0
+  planetRadius:
+    <fieldHash>k__BackingField: 1943365600
+    m_OverrideState: 0
+    m_Value: 6378.1
+  renderingSpace:
+    <fieldHash>k__BackingField: -2112251304
+    m_OverrideState: 0
+    m_Value: 0
+  centerMode:
+    <fieldHash>k__BackingField: -1872900912
+    m_OverrideState: 0
+    m_Value: 0
+  planetCenter:
+    <fieldHash>k__BackingField: -1633550520
+    m_OverrideState: 0
+    m_Value: {x: 0, y: -6378.1, z: 0}
+  windOrientation:
+    <fieldHash>k__BackingField: -1394200128
+    m_OverrideState: 0
+    m_Value: 0
+  windSpeed:
+    <fieldHash>k__BackingField: -1154849736
+    m_OverrideState: 0
+    m_Value: 100
+  fogType:
+    <fieldHash>k__BackingField: -915499344
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &4981354747274665315
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d877ec3e844f2ca46830012e8e79319b, type: 3}
+  m_Name: PhysicallyBasedSky
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  rotation:
+    <fieldHash>k__BackingField: -1629499336
+    m_OverrideState: 0
+    m_Value: 0
+  skyIntensityMode:
+    <fieldHash>k__BackingField: -1390148944
+    m_OverrideState: 0
+    m_Value: 0
+  exposure:
+    <fieldHash>k__BackingField: -911448160
+    m_OverrideState: 0
+    m_Value: 0
+  multiplier:
+    <fieldHash>k__BackingField: -672097768
+    m_OverrideState: 0
+    m_Value: 1
+  upperHemisphereLuxValue:
+    <fieldHash>k__BackingField: -432747376
+    m_OverrideState: 0
+    m_Value: 1
+  upperHemisphereLuxColor:
+    <fieldHash>k__BackingField: -193396984
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  desiredLuxValue:
+    <fieldHash>k__BackingField: 45953408
+    m_OverrideState: 0
+    m_Value: 20000
+  updateMode:
+    <fieldHash>k__BackingField: 285303800
+    m_OverrideState: 0
+    m_Value: 0
+  updatePeriod:
+    <fieldHash>k__BackingField: 524654192
+    m_OverrideState: 0
+    m_Value: 0
+  includeSunInBaking:
+    <fieldHash>k__BackingField: 764004584
+    m_OverrideState: 0
+    m_Value: 0
+  m_SkyVersion: 3
+  m_ObsoleteEarthPreset:
+    <fieldHash>k__BackingField: 759953400
+    m_OverrideState: 0
+    m_Value: 1
+  planetaryRadius:
+    <fieldHash>k__BackingField: 999303792
+    m_OverrideState: 0
+    m_Value: 6378100
+  planetCenterPosition:
+    <fieldHash>k__BackingField: 1238654184
+    m_OverrideState: 0
+    m_Value: {x: 0, y: -6378100, z: 0}
+  type:
+    <fieldHash>k__BackingField: 1478004576
+    m_OverrideState: 0
+    m_Value: 1
+  atmosphericScattering:
+    <fieldHash>k__BackingField: 1717354968
+    m_OverrideState: 0
+    m_Value: 1
+  renderingMode:
+    <fieldHash>k__BackingField: 1956705360
+    m_OverrideState: 0
+    m_Value: 0
+  material:
+    <fieldHash>k__BackingField: -423458800
+    m_OverrideState: 1
+    m_Value: {fileID: -876546973899608171, guid: 02532cbb810fb404db49da84f1efe41e, type: 3}
+  airDensityR:
+    <fieldHash>k__BackingField: -184108408
+    m_OverrideState: 0
+    m_Value: 0.04534
+  airDensityG:
+    <fieldHash>k__BackingField: 55241984
+    m_OverrideState: 0
+    m_Value: 0.10237241
+  airDensityB:
+    <fieldHash>k__BackingField: 294592376
+    m_OverrideState: 0
+    m_Value: 0.23264056
+  airTint:
+    <fieldHash>k__BackingField: 533942768
+    m_OverrideState: 0
+    m_Value:
+      r: 0.9
+      g: 0.9
+      b: 1
+      a: 1
+  airMaximumAltitude:
+    <fieldHash>k__BackingField: 773293160
+    m_OverrideState: 0
+    m_Value: 55261.973
+  aerosolDensity:
+    <fieldHash>k__BackingField: 1012643552
+    m_OverrideState: 0
+    m_Value: 0.01192826
+  aerosolTint:
+    <fieldHash>k__BackingField: 1251993944
+    m_OverrideState: 0
+    m_Value:
+      r: 0.9
+      g: 0.9
+      b: 0.9
+      a: 1
+  aerosolMaximumAltitude:
+    <fieldHash>k__BackingField: 1491344336
+    m_OverrideState: 0
+    m_Value: 8289.296
+  aerosolAnisotropy:
+    <fieldHash>k__BackingField: 1730694728
+    m_OverrideState: 0
+    m_Value: 0.8
+  ozoneDensityDimmer:
+    <fieldHash>k__BackingField: 1970045120
+    m_OverrideState: 0
+    m_Value: 1
+  ozoneMinimumAltitude:
+    <fieldHash>k__BackingField: -1846221392
+    m_OverrideState: 0
+    m_Value: 10000
+  ozoneLayerWidth:
+    <fieldHash>k__BackingField: -1606871000
+    m_OverrideState: 0
+    m_Value: 30000
+  groundTint:
+    <fieldHash>k__BackingField: -1367520608
+    m_OverrideState: 0
+    m_Value:
+      r: 0.12156863
+      g: 0.105882354
+      b: 0.09411765
+      a: 1
+  groundColorTexture:
+    <fieldHash>k__BackingField: -1128170216
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  groundEmissionTexture:
+    <fieldHash>k__BackingField: -888819824
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  groundEmissionMultiplier:
+    <fieldHash>k__BackingField: -649469432
+    m_OverrideState: 0
+    m_Value: 1
+  planetRotation:
+    <fieldHash>k__BackingField: -410119040
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  spaceEmissionTexture:
+    <fieldHash>k__BackingField: -170768648
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  spaceEmissionMultiplier:
+    <fieldHash>k__BackingField: 68581744
+    m_OverrideState: 0
+    m_Value: 1
+  spaceRotation:
+    <fieldHash>k__BackingField: 307932136
+    m_OverrideState: 0
+    m_Value: {x: 0, y: 0, z: 0}
+  colorSaturation:
+    <fieldHash>k__BackingField: -1832881632
+    m_OverrideState: 0
+    m_Value: 1
+  alphaSaturation:
+    <fieldHash>k__BackingField: 750664824
+    m_OverrideState: 0
+    m_Value: 1
+  alphaMultiplier:
+    <fieldHash>k__BackingField: 1229365608
+    m_OverrideState: 0
+    m_Value: 1
+  horizonTint:
+    <fieldHash>k__BackingField: 1468716000
+    m_OverrideState: 0
+    m_Value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  zenithTint:
+    <fieldHash>k__BackingField: 1708066392
+    m_OverrideState: 0
+    m_Value:
+      r: 1
+      g: 1
+      b: 1
+      a: 1
+  horizonZenithShift:
+    <fieldHash>k__BackingField: 1947416784
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &5305602202033311358
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c604242b4dd4c8caa4d1944b94189e0, type: 3}
+  m_Name: HighQualityLineRenderingVolumeComponent
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  enable:
+    <fieldHash>k__BackingField: -1131872032
+    m_OverrideState: 1
+    m_Value: 1
+  compositionMode:
+    <fieldHash>k__BackingField: -653171248
+    m_OverrideState: 1
+    m_Value: 0
+  clusterCount:
+    <fieldHash>k__BackingField: -413820856
+    m_OverrideState: 1
+    m_Value: 24
+  sortingQuality:
+    <fieldHash>k__BackingField: -174470464
+    m_OverrideState: 1
+    m_Value: 1
+  tileOpacityThreshold:
+    <fieldHash>k__BackingField: 64879928
+    m_OverrideState: 1
+    m_Value: 0.95
+  writeDepthAlphaThreshold:
+    <fieldHash>k__BackingField: 304230320
+    m_OverrideState: 0
+    m_Value: 0
+--- !u!114 &5315503232242033309
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d08ce26990eb1a4a9177b860541e702, type: 3}
+  m_Name: Exposure
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  mode:
+    <fieldHash>k__BackingField: -2094860360
+    m_OverrideState: 1
+    m_Value: 1
+  meteringMode:
+    <fieldHash>k__BackingField: -1855509968
+    m_OverrideState: 0
+    m_Value: 2
+  luminanceSource:
+    <fieldHash>k__BackingField: -1616159576
+    m_OverrideState: 0
+    m_Value: 1
+  fixedExposure:
+    <fieldHash>k__BackingField: -1376809184
+    m_OverrideState: 0
+    m_Value: 0
+  compensation:
+    <fieldHash>k__BackingField: -1137458792
+    m_OverrideState: 0
+    m_Value: 0
+  limitMin:
+    <fieldHash>k__BackingField: -898108400
+    m_OverrideState: 0
+    m_Value: -10
+  limitMax:
+    <fieldHash>k__BackingField: 537993952
+    m_OverrideState: 0
+    m_Value: 10
+  curveMap:
+    <fieldHash>k__BackingField: 777344344
+    m_OverrideState: 0
+    m_Value:
+      m_Curve:
+      - time: -10
+        value: -10
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - time: 20
+        value: 20
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  limitMinCurveMap:
+    <fieldHash>k__BackingField: 1016694736
+    m_OverrideState: 0
+    m_Value:
+      m_Curve:
+      - time: -10
+        value: -12
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - time: 20
+        value: 18
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  limitMaxCurveMap:
+    <fieldHash>k__BackingField: 1256045128
+    m_OverrideState: 0
+    m_Value:
+      m_Curve:
+      - time: -10
+        value: -8
+        inSlope: 0
+        outSlope: 1
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      - time: 20
+        value: 22
+        inSlope: 1
+        outSlope: 0
+        tangentMode: 0
+        weightedMode: 0
+        inWeight: 0
+        outWeight: 0
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+  adaptationMode:
+    <fieldHash>k__BackingField: 1495395520
+    m_OverrideState: 0
+    m_Value: 1
+  adaptationSpeedDarkToLight:
+    <fieldHash>k__BackingField: 1734745912
+    m_OverrideState: 0
+    m_Value: 3
+  adaptationSpeedLightToDark:
+    <fieldHash>k__BackingField: 1974096304
+    m_OverrideState: 0
+    m_Value: 1
+  weightTextureMask:
+    <fieldHash>k__BackingField: -2081520600
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  histogramPercentages:
+    <fieldHash>k__BackingField: -1842170208
+    m_OverrideState: 0
+    m_Value: {x: 40, y: 90}
+  histogramUseCurveRemapping:
+    <fieldHash>k__BackingField: -1602819816
+    m_OverrideState: 0
+    m_Value: 0
+  targetMidGray:
+    <fieldHash>k__BackingField: -1363469424
+    m_OverrideState: 0
+    m_Value: 0
+  centerAroundExposureTarget:
+    <fieldHash>k__BackingField: -1124119032
+    m_OverrideState: 0
+    m_Value: 0
+  proceduralCenter:
+    <fieldHash>k__BackingField: -884768640
+    m_OverrideState: 0
+    m_Value: {x: 0.5, y: 0.5}
+  proceduralRadii:
+    <fieldHash>k__BackingField: -645418248
+    m_OverrideState: 0
+    m_Value: {x: 0.3, y: 0.3}
+  maskMinIntensity:
+    <fieldHash>k__BackingField: -406067856
+    m_OverrideState: 0
+    m_Value: -30
+  maskMaxIntensity:
+    <fieldHash>k__BackingField: -166717464
+    m_OverrideState: 0
+    m_Value: 30
+  proceduralSoftness:
+    <fieldHash>k__BackingField: 72632928
+    m_OverrideState: 0
+    m_Value: 0.5
+--- !u!114 &7502528774814404555
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9008a067f4d626c4d8bc4bc48f04bb89, type: 3}
+  m_Name: AmbientOcclusion
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  quality:
+    <fieldHash>k__BackingField: 694019888
+    m_OverrideState: 0
+    m_Value: 1
+  rayTracing:
+    <fieldHash>k__BackingField: -37371048
+    m_OverrideState: 0
+    m_Value: 0
+  intensity:
+    <fieldHash>k__BackingField: 201979344
+    m_OverrideState: 1
+    m_Value: 0.5
+  directLightingStrength:
+    <fieldHash>k__BackingField: 441329736
+    m_OverrideState: 0
+    m_Value: 0
+  radius:
+    <fieldHash>k__BackingField: 680680128
+    m_OverrideState: 1
+    m_Value: 1.5
+  spatialBilateralAggressiveness:
+    <fieldHash>k__BackingField: 920030520
+    m_OverrideState: 0
+    m_Value: 0.15
+  temporalAccumulation:
+    <fieldHash>k__BackingField: 1159380912
+    m_OverrideState: 0
+    m_Value: 1
+  ghostingReduction:
+    <fieldHash>k__BackingField: 1398731304
+    m_OverrideState: 0
+    m_Value: 0.5
+  blurSharpness:
+    <fieldHash>k__BackingField: 1638081696
+    m_OverrideState: 0
+    m_Value: 0.1
+  layerMask:
+    <fieldHash>k__BackingField: 1877432088
+    m_OverrideState: 0
+    m_Value:
+      m_Bits: 4294967295
+  specularOcclusion:
+    <fieldHash>k__BackingField: 2116782480
+    m_OverrideState: 0
+    m_Value: 0.5
+  occluderMotionRejection:
+    <fieldHash>k__BackingField: -1938834424
+    m_OverrideState: 0
+    m_Value: 1
+  receiverMotionRejection:
+    <fieldHash>k__BackingField: -1699484032
+    m_OverrideState: 0
+    m_Value: 1
+  m_StepCount:
+    <fieldHash>k__BackingField: -1460133640
+    m_OverrideState: 0
+    m_Value: 6
+  m_FullResolution:
+    <fieldHash>k__BackingField: -1220783248
+    m_OverrideState: 0
+    m_Value: 0
+  m_MaximumRadiusInPixels:
+    <fieldHash>k__BackingField: -981432856
+    m_OverrideState: 0
+    m_Value: 40
+  m_BilateralUpsample:
+    <fieldHash>k__BackingField: -742082464
+    m_OverrideState: 0
+    m_Value: 1
+  m_DirectionCount:
+    <fieldHash>k__BackingField: -502732072
+    m_OverrideState: 0
+    m_Value: 2
+  m_RayLength:
+    <fieldHash>k__BackingField: -263381680
+    m_OverrideState: 0
+    m_Value: 3
+  m_SampleCount:
+    <fieldHash>k__BackingField: -24031288
+    m_OverrideState: 0
+    m_Value: 2
+  m_Denoise:
+    <fieldHash>k__BackingField: 215319104
+    m_OverrideState: 0
+    m_Value: 1
+  m_DenoiserRadius:
+    <fieldHash>k__BackingField: 454669496
+    m_OverrideState: 0
+    m_Value: 0.5
+--- !u!114 &7542669330009093999
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f086a068d4c5889438831b3ae9afc11c, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  mode:
+    <fieldHash>k__BackingField: 1044548600
+    m_OverrideState: 1
+    m_Value: 2
+  useFullACES:
+    <fieldHash>k__BackingField: 1283898992
+    m_OverrideState: 0
+    m_Value: 0
+  toeStrength:
+    <fieldHash>k__BackingField: 1523249384
+    m_OverrideState: 0
+    m_Value: 0
+  toeLength:
+    <fieldHash>k__BackingField: 1762599776
+    m_OverrideState: 0
+    m_Value: 0.5
+  shoulderStrength:
+    <fieldHash>k__BackingField: 2001950168
+    m_OverrideState: 0
+    m_Value: 0
+  shoulderLength:
+    <fieldHash>k__BackingField: -2053666736
+    m_OverrideState: 0
+    m_Value: 0.5
+  shoulderAngle:
+    <fieldHash>k__BackingField: -1814316344
+    m_OverrideState: 0
+    m_Value: 0
+  gamma:
+    <fieldHash>k__BackingField: -1574965952
+    m_OverrideState: 0
+    m_Value: 1
+  lutTexture:
+    <fieldHash>k__BackingField: -1335615560
+    m_OverrideState: 0
+    m_Value: {fileID: 0}
+  lutContribution:
+    <fieldHash>k__BackingField: -1096265168
+    m_OverrideState: 0
+    m_Value: 1
+  neutralHDRRangeReductionMode:
+    <fieldHash>k__BackingField: -856914776
+    m_OverrideState: 0
+    m_Value: 2
+  acesPreset:
+    <fieldHash>k__BackingField: -617564384
+    m_OverrideState: 0
+    m_Value: 3
+  fallbackMode:
+    <fieldHash>k__BackingField: -378213992
+    m_OverrideState: 0
+    m_Value: 1
+  hueShiftAmount:
+    <fieldHash>k__BackingField: -138863600
+    m_OverrideState: 0
+    m_Value: 0
+  detectPaperWhite:
+    <fieldHash>k__BackingField: 100486792
+    m_OverrideState: 0
+    m_Value: 0
+  paperWhite:
+    <fieldHash>k__BackingField: 339837184
+    m_OverrideState: 0
+    m_Value: 300
+  detectBrightnessLimits:
+    <fieldHash>k__BackingField: 579187576
+    m_OverrideState: 0
+    m_Value: 1
+  minNits:
+    <fieldHash>k__BackingField: 818537968
+    m_OverrideState: 0
+    m_Value: 0.005
+  maxNits:
+    <fieldHash>k__BackingField: 1057888360
+    m_OverrideState: 0
+    m_Value: 1000
+--- !u!114 &7686318427622180703
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ddcec8a8eb2d684d833ac8f5d26aebd, type: 3}
+  m_Name: HDShadowSettings
+  m_EditorClassIdentifier: 
+  active: 1
+  <displayName>k__BackingField: 
+  m_CascadeShadowSplits:
+  - 0
+  - 0
+  - 0
+  m_CascadeShadowBorders:
+  - 0
+  - 0
+  - 0
+  - 0
+  interCascadeBorders: 1
+  maxShadowDistance:
+    <fieldHash>k__BackingField: 682435448
+    m_OverrideState: 1
+    m_Value: 150
+  directionalTransmissionMultiplier:
+    <fieldHash>k__BackingField: 921785840
+    m_OverrideState: 0
+    m_Value: 1
+  cascadeShadowSplitCount:
+    <fieldHash>k__BackingField: 1161136232
+    m_OverrideState: 0
+    m_Value: 4
+  cascadeShadowSplit0:
+    <fieldHash>k__BackingField: 1400486624
+    m_OverrideState: 0
+    m_Value: 0.05
+    normalized: 0
+    minCascadeToAppears: 2
+  cascadeShadowSplit1:
+    <fieldHash>k__BackingField: 1639837016
+    m_OverrideState: 0
+    m_Value: 0.15
+    normalized: 0
+    minCascadeToAppears: 3
+  cascadeShadowSplit2:
+    <fieldHash>k__BackingField: 1879187408
+    m_OverrideState: 0
+    m_Value: 0.3
+    normalized: 0
+    minCascadeToAppears: 4
+  cascadeShadowBorder0:
+    <fieldHash>k__BackingField: 2118537800
+    m_OverrideState: 1
+    m_Value: 0.06905067
+    normalized: 0
+    minCascadeToAppears: 1
+  cascadeShadowBorder1:
+    <fieldHash>k__BackingField: -1937079104
+    m_OverrideState: 1
+    m_Value: 0.05086228
+    normalized: 0
+    minCascadeToAppears: 2
+  cascadeShadowBorder2:
+    <fieldHash>k__BackingField: -1697728712
+    m_OverrideState: 0
+    m_Value: 0
+    normalized: 0
+    minCascadeToAppears: 3
+  cascadeShadowBorder3:
+    <fieldHash>k__BackingField: -1458378320
+    m_OverrideState: 0
+    m_Value: 0
+    normalized: 0
+    minCascadeToAppears: 4
+--- !u!114 &7690965735642398724
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a7ff42a8c5be6646ad3975f3a54c1eb, type: 3}
+  m_Name: DiffusionProfileList
+  m_EditorClassIdentifier: Unity.RenderPipelines.HighDefinition.Runtime::UnityEngine.Rendering.HighDefinition.DiffusionProfileList
+  active: 1
+  <displayName>k__BackingField: 
+  diffusionProfiles:
+    <fieldHash>k__BackingField: 496911328
+    m_OverrideState: 1
+    m_Value:
+    - {fileID: 11400000, guid: 404820c4cf36ad944862fa59c56064f0, type: 2}
+    - {fileID: 11400000, guid: 2384dbf2c1c420f45a792fbc315fbfb1, type: 2}
+    accumulatedArray: []
+    accumulatedCount: 0
+    m_DefaultDiffusionProfileSettings: {fileID: 0}

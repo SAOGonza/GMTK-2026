@@ -6827,6 +6827,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Smoke Stack
       objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.maxCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minCurve.m_Curve.Array.data[0].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minCurve.m_Curve.Array.data[1].inWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.maxCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.maxCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minCurve.m_Curve.Array.data[0].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 3756562564243158923, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
+      propertyPath: EmissionModule.m_Bursts.Array.data[0].countCurve.minCurve.m_Curve.Array.data[1].outWeight
+      value: 0.33333334
+      objectReference: {fileID: 0}
     - target: {fileID: 7688143145287777450, guid: bd32d4976f4e2194c8a65ef9e76dcb67, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.2766
