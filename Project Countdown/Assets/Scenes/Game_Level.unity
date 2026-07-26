@@ -119,6 +119,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &40060575
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.993782
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 64.2169
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -78.16817
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071067
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
+      propertyPath: m_Name
+      value: seaweed
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
 --- !u!1001 &157050604
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -290,63 +347,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11676a5571eec5843a01309152b721d7, type: 3}
---- !u!1001 &276957153
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 36.497707
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 52.968796
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -79.331245
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071067
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
-      propertyPath: m_Name
-      value: seaweed
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: deb191308690bc8469e282f21b69e5c8, type: 3}
 --- !u!1 &307968189
 GameObject:
   m_ObjectHideFlags: 0
@@ -2955,4 +2955,4 @@ SceneRoots:
   - {fileID: 644129212}
   - {fileID: 1718629852}
   - {fileID: 2125503168}
-  - {fileID: 276957153}
+  - {fileID: 40060575}
