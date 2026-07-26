@@ -50,7 +50,7 @@ MonoBehaviour:
   audioSource: {fileID: 4674855513318092569}
   submergeClip: {fileID: 8300000, guid: c6fdf02192c532b4ab4ee87400de1efb, type: 3}
   emergeClip: {fileID: 8300000, guid: c6ca4d1aaf323b64aa5f5322c7649e30, type: 3}
-  oxygenDrainRate: 5
+  oxygenDrainRate: 1.11
   oxygenRecoveryRate: 100
   bubblesParticles: {fileID: 0}
 --- !u!135 &3201087087054012688
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   moveSpeed: 5
-  swimSpeed: 6
+  swimSpeed: 7
   swimBoostMultiplier: 1.35
   idleBeforeSinking: 2
   riseAcceleration: 2
@@ -290,6 +290,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eec83c96823d1d44c80206b76b4ffb1f, type: 3}
   - {fileID: 8300000, guid: e6466e7e5ff215f42a32422ee81fd385, type: 3}
   - {fileID: 8300000, guid: f6dc1440637d5004b98c3331b500eb03, type: 3}
+  introVoiceLine: {fileID: 8300000, guid: e8c2157711d0c4242886227cd870728f, type: 3}
 --- !u!114 &5751204244364002677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -321,6 +322,12 @@ MonoBehaviour:
     m_Bits: 64
   playerCamera: {fileID: 0}
   interactionPromptText: {fileID: 0}
+  audioSource: {fileID: 4989886409703392916}
+  pickupVoiceLines:
+  - {fileID: 8300000, guid: f90561c0b9a4a06429a8da463f292713, type: 3}
+  - {fileID: 8300000, guid: 2c4e063085f9d8348b81626f1240fcec, type: 3}
+  - {fileID: 8300000, guid: 4855f6cf886fc08488592ba90b39a139, type: 3}
+  - {fileID: 8300000, guid: cb1e6a2207fa9ef4cb1095eae27150c9, type: 3}
 --- !u!114 &4965651303045992136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +352,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

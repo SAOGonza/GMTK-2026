@@ -34,6 +34,7 @@ public class Player : MonoBehaviour
     [Header("Audio")]
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private AudioClip[] antidoteConsumeSFX;
+    [SerializeField] private AudioClip introVoiceLine;
 
     private PlayerInventory inventory;
 
@@ -63,11 +64,15 @@ public class Player : MonoBehaviour
         IdleState = new PlayerIdleState(this, StateMachine);
         MoveState = new PlayerMoveState(this, StateMachine);
         SwimState = new PlayerSwimState(this, StateMachine);
+
+
     }
 
     private void Start()
     {
         StateMachine.Initialize(IdleState);
+
+        Invoke(nameof(PlayIntroVoiceLine), 2f);
     }
 
     private void Update()
@@ -76,6 +81,14 @@ public class Player : MonoBehaviour
         ReadAntidoteInput();
 
         StateMachine.CurrentState?.Update();
+    }
+
+    private void PlayIntroVoiceLine()
+    {
+        if (audioSource == null || introVoiceLine == null)
+            return;
+
+        audioSource.PlayOneShot(introVoiceLine);
     }
 
     private void ReadMovementInput()
