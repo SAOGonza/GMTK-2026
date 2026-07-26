@@ -50,7 +50,7 @@ MonoBehaviour:
   audioSource: {fileID: 4674855513318092569}
   submergeClip: {fileID: 8300000, guid: c6fdf02192c532b4ab4ee87400de1efb, type: 3}
   emergeClip: {fileID: 8300000, guid: c6ca4d1aaf323b64aa5f5322c7649e30, type: 3}
-  oxygenDrainRate: 10
+  oxygenDrainRate: 1.11
   oxygenRecoveryRate: 100
   bubblesParticles: {fileID: 0}
 --- !u!135 &3201087087054012688
@@ -290,6 +290,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: eec83c96823d1d44c80206b76b4ffb1f, type: 3}
   - {fileID: 8300000, guid: e6466e7e5ff215f42a32422ee81fd385, type: 3}
   - {fileID: 8300000, guid: f6dc1440637d5004b98c3331b500eb03, type: 3}
+  introVoiceLine: {fileID: 8300000, guid: e8c2157711d0c4242886227cd870728f, type: 3}
 --- !u!114 &5751204244364002677
 MonoBehaviour:
   m_ObjectHideFlags: 0

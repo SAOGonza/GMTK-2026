@@ -987,7 +987,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ObjectiveUI
   objectiveUI: {fileID: 1993836388}
-  delayBeforeShowing: 7
+  delayBeforeShowing: 4
   displayDuration: 25
 --- !u!1 &307968189
 GameObject:
@@ -1576,6 +1576,10 @@ PrefabInstance:
       propertyPath: gameTimer
       value: 
       objectReference: {fileID: 2023836363}
+    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: introVoiceLine
+      value: 
+      objectReference: {fileID: 8300000, guid: e8c2157711d0c4242886227cd870728f, type: 3}
     - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: cameraTransform
       value: 
