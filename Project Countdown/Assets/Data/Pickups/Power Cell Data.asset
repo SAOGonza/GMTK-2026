@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupData
   pickupName: Power Cell
   description: Used to overload the power core.
-  pickupVFX: {fileID: 0}
+  pickupVFX: {fileID: 605457407079176603, guid: 08964ff9c9ca5504e9c8a4254f64bd0a, type: 3}
   pickupSFX: {fileID: 8300000, guid: 1e40ada3861b41a4dae2b4af6a20a618, type: 3}

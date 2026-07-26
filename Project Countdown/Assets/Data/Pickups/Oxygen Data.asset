@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PickupData
   pickupName: Oxygen Canister
   description: Replenish your oxygen to 100%.
-  pickupVFX: {fileID: 0}
+  pickupVFX: {fileID: 8940085618437679803, guid: 0ff9917bc2ac92e40830d5c960853bf7, type: 3}
   pickupSFX: {fileID: 8300000, guid: 11d19cc4b1626c649a18fcb80630c25a, type: 3}
