@@ -15,10 +15,10 @@ MonoBehaviour:
   active: 1
   temperature:
     m_OverrideState: 1
-    m_Value: -20
+    m_Value: 20
   tint:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: -5
 --- !u!114 &-6079111766627755320
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -104,10 +104,10 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.513
   smoothness:
-    m_OverrideState: 0
-    m_Value: 0.2
+    m_OverrideState: 1
+    m_Value: 0.12
   rounded:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &3832255724902953010
 MonoBehaviour:
