@@ -9,8 +9,17 @@ public class Player : MonoBehaviour
 
     [Header("Swimming")]
     [SerializeField] private float swimSpeed = 3f;
-    [SerializeField] private float riseSpeed = 3f;
-    [SerializeField] private float sinkSpeed = 1f;
+    [SerializeField] private float swimBoostMultiplier = 1.35f;
+
+    [SerializeField] private float idleBeforeSinking = 2f;
+
+    [SerializeField] private float riseAcceleration = 2f;
+    [SerializeField] private float sinkAcceleration = 1.5f;
+
+    [SerializeField] private float maxRiseSpeed = 2.5f;
+    [SerializeField] private float maxSinkSpeed = 1.5f;
+
+    private float swimIdleTimer;
 
     [Header("References")]
     [SerializeField] private Transform cameraTransform;
@@ -18,6 +27,15 @@ public class Player : MonoBehaviour
     [Header("Gravity")]
     [SerializeField] private float gravity = -20f;
     [SerializeField] private float groundedForce = -2f;
+
+    [Header("Game Timer")]
+    [SerializeField] GameTimer gameTimer;
+
+    [Header("Audio")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] antidoteConsumeSFX;
+
+    private PlayerInventory inventory;
 
     private float verticalVelocity;
 
@@ -38,6 +56,7 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         CharacterController = GetComponent<CharacterController>();
+        inventory = GetComponent<PlayerInventory>();
 
         StateMachine = new PlayerStateMachine();
 
@@ -54,6 +73,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         ReadMovementInput();
+        ReadAntidoteInput();
 
         StateMachine.CurrentState?.Update();
     }
@@ -78,6 +98,33 @@ public class Player : MonoBehaviour
             MoveInput += Vector2.right;
 
         MoveInput = Vector2.ClampMagnitude(MoveInput, 1f);
+    }
+
+    private void ReadAntidoteInput()
+    {
+        if (Keyboard.current == null || !Keyboard.current.digit1Key.wasPressedThisFrame)
+            return;
+
+        if (
+            gameTimer == null ||
+            gameTimer.IsAntidoteActive ||
+            inventory == null ||
+            inventory.AntidoteCount <= 0
+        )
+            return;
+
+        inventory.RemoveAntidote(1);
+        PlayAntidoteSound();
+        gameTimer.ApplyAntidote();
+    }
+
+    private void PlayAntidoteSound()
+    {
+        if (audioSource == null || antidoteConsumeSFX == null || antidoteConsumeSFX.Length == 0)
+            return;
+
+        int randomIndex = Random.Range(0, antidoteConsumeSFX.Length);
+        audioSource.PlayOneShot(antidoteConsumeSFX[randomIndex]);
     }
 
     public void Move()
@@ -138,38 +185,94 @@ public class Player : MonoBehaviour
         if (cameraTransform == null)
             return;
 
-        verticalVelocity = 0f; // Reset vertical velocity when swimming.
+        bool isRising = Keyboard.current != null && Keyboard.current.spaceKey.isPressed;
+
+        bool isBoosting =
+            Keyboard.current != null &&
+            (
+                Keyboard.current.leftShiftKey.isPressed ||
+                Keyboard.current.rightShiftKey.isPressed
+            );
+
+        bool hasDirectionalInput =
+            MoveInput.sqrMagnitude > 0.01f;
+
+        UpdateSwimVerticalVelocity(hasDirectionalInput, isRising);
 
         Vector3 forward = cameraTransform.forward;
         Vector3 right = cameraTransform.right;
-
-        // Keep WASD movement horizontal even when the player looks up or down.
-        forward.y = 0f;
-        right.y = 0f;
 
         forward.Normalize();
         right.Normalize();
 
         Vector3 moveDirection = (forward * MoveInput.y) + (right * MoveInput.x);
-        Vector3 velocity = moveDirection * swimSpeed * MovementSpeedMultiplier;
 
-        // Determine if player is rising or sinking based on vertical input.
-        bool isRising = Keyboard.current != null && Keyboard.current.spaceKey.isPressed;
+        moveDirection = Vector3.ClampMagnitude(moveDirection, 1f);
 
-        velocity.y = isRising ? riseSpeed : -sinkSpeed;
+        float currentSwimSpeed = swimSpeed;
+
+        if (isBoosting)
+            currentSwimSpeed *= swimBoostMultiplier;
+
+        Vector3 velocity = moveDirection * currentSwimSpeed * MovementSpeedMultiplier;
+
+        velocity.y += verticalVelocity;
 
         CharacterController.Move(velocity * Time.deltaTime);
     }
 
+    private void UpdateSwimVerticalVelocity(bool hasDirectionalInput,bool isRising)
+    {
+        if (isRising)
+        {
+            swimIdleTimer = 0f;
+            verticalVelocity = Mathf.MoveTowards(verticalVelocity, maxRiseSpeed, riseAcceleration * Time.deltaTime);
+
+            return;
+        }
+
+        if (hasDirectionalInput)
+        {
+            swimIdleTimer = 0f;
+            verticalVelocity = Mathf.MoveTowards(verticalVelocity, 0f, sinkAcceleration * Time.deltaTime);
+
+            return;
+        }
+
+        swimIdleTimer += Time.deltaTime;
+
+        if (swimIdleTimer < idleBeforeSinking)
+        {
+            verticalVelocity = Mathf.MoveTowards(verticalVelocity, 0f, sinkAcceleration * Time.deltaTime);
+            return;
+        }
+
+        verticalVelocity = Mathf.MoveTowards(verticalVelocity, -maxSinkSpeed, sinkAcceleration * Time.deltaTime);
+    }
+
     public void EnterWater()
     {
+        if (IsUnderwater)
+            return;
+
         IsUnderwater = true;
+
+        verticalVelocity = 0f;
+        swimIdleTimer = 0f;
+
         StateMachine.ChangeState(SwimState);
     }
 
     public void ExitWater()
     {
+        if (!IsUnderwater)
+            return;
+
         IsUnderwater = false;
+
+        verticalVelocity = 0f;
+        swimIdleTimer = 0f;
+
         if (MoveInput.sqrMagnitude > 0f)
             StateMachine.ChangeState(MoveState);
         else

@@ -283,7 +283,7 @@
                 "m_Node": {
                     "m_Id": "3acce012a3d8421e99afbe17dfde0a6c"
                 },
-                "m_SlotId": 2
+                "m_SlotId": 1
             }
         },
         {
@@ -381,7 +381,7 @@
                 "m_Node": {
                     "m_Id": "3acce012a3d8421e99afbe17dfde0a6c"
                 },
-                "m_SlotId": 3
+                "m_SlotId": 2
             }
         },
         {
@@ -795,7 +795,7 @@
     "m_AlembicMotionVectors": false,
     "m_SupportsLODCrossFade": false,
     "m_CustomEditorGUI": "",
-    "m_SupportVFX": false
+    "m_SupportVFX": true
 }
 
 {

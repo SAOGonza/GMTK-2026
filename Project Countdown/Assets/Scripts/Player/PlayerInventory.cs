@@ -32,4 +32,10 @@ public class PlayerInventory : MonoBehaviour
         PowerCellCount = Mathf.Max(0, PowerCellCount - amount);
         OnPowerCellCountChanged?.Invoke(PowerCellCount);
     }
+
+    public void RemoveAntidote(int amount)
+    {
+        AntidoteCount--;
+        OnAntidoteCountChanged?.Invoke(AntidoteCount);
+    }
 }

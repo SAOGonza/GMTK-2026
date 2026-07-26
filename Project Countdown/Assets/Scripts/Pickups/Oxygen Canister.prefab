@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 3946782825471056289}
   - component: {fileID: 8033766502948860355}
   - component: {fileID: 3259772615204526939}
+  - component: {fileID: 6047387104012184819}
   m_Layer: 6
   m_Name: Oxygen Canister
   m_TagString: Untagged
@@ -42,7 +43,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1030316054364490029}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: -1556554524394260439, guid: 31f0d123b0df64740be5644e0c27a739, type: 3}
 --- !u!23 &3946782825471056289
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -68,7 +69,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: af65562f27c9505418f42b0b6857d504, type: 2}
+  - {fileID: 2100000, guid: 5ea943b1d8bbef94a91968f9cfba60b7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,10 +112,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 1.1387218
+  m_Height: 2.2774436
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: 1.0053207}
 --- !u!114 &3259772615204526939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,3 +129,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OxygenCanisterPickup
   pickupData: {fileID: 11400000, guid: fb817a45af34eaf49a739f41d939c358, type: 2}
+--- !u!114 &6047387104012184819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030316054364490029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83a2f48cea1dda846b9e6177ec3d1e7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotatePickupController
+  rotationSpeed: 50

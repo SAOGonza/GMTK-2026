@@ -61,7 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9f706f43d38b5489b43f31fb6ca8c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameTimer
-  transformationDuration: 40
+  transformationDuration: 600
   antidotePauseDuration: 25
 --- !u!114 &7205918387827038426
 MonoBehaviour:
@@ -75,6 +75,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e0978f41ca06b4493fc21bcb5d5f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfectionEffectsController
+  gameManager: {fileID: 986510084061272922}
   gameTimer: {fileID: 3356235219335088047}
   player: {fileID: 0}
   infectionOverlay: {fileID: 0}
@@ -83,7 +84,8 @@ MonoBehaviour:
   stage75Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
   stage50Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
   stage25Clip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
-  transformationClip: {fileID: 8300000, guid: 383dc3afaecc370448c848721dfc76db, type: 3}
+  transformationClip: {fileID: 8300000, guid: b0d8c36a9f0513c4287409fdd094b744, type: 3}
+  drownedClip: {fileID: 8300000, guid: 4f3b01aefc7cb6444a44cf892c0e2898, type: 3}
   impulseSource: {fileID: 3778107276019592119}
   stage75Duration: 6
   stage75OverlayStrength: 0.3
@@ -92,7 +94,17 @@ MonoBehaviour:
   stage25Duration: 6
   stage25OverlayStrength: 0.8
   stumbleSpeedMultiplier: 0.4
-  gameOverFadeDuration: 2
+  gameOverFadeDuration: 1
+  backToMenuDelay: 2
+  backToMenuButton: {fileID: 0}
+  sceneFade: {fileID: 0}
+  mainMenuSceneName: Main_Menu
+  victoryScreen: {fileID: 0}
+  victoryBackToMenuButton: {fileID: 0}
+  victoryClip: {fileID: 8300000, guid: 5e48fec59252fb447b14b57b5432994c, type: 3}
+  victoryFadeDuration: 2
+  victoryButtonDelay: 2
+  pauseMenuController: {fileID: 0}
 --- !u!114 &3778107276019592119
 MonoBehaviour:
   m_ObjectHideFlags: 0
