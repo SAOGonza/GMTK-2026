@@ -456,7 +456,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 100.5, z: 0}
   m_LocalScale: {x: 15, y: 0, z: 15}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 797696974}
   m_Father: {fileID: 0}
@@ -1144,11 +1144,7 @@ PrefabInstance:
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: settingsMenuUI
       value: 
-<<<<<<< Updated upstream
       objectReference: {fileID: 901444590}
-=======
-      objectReference: {fileID: 1912431464}
->>>>>>> Stashed changes
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: 'gameplayInputBehaviours.Array.data[0]'
       value: 
@@ -2311,11 +2307,6 @@ CanvasGroup:
 --- !u!225 &1907160439 stripped
 CanvasGroup:
   m_CorrespondingSourceObject: {fileID: 2741146262523293778, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
-  m_PrefabInstance: {fileID: 1907160434}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1912431464 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4001727245703511324, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
   m_PrefabInstance: {fileID: 1907160434}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1933846274
