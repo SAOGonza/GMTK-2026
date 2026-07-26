@@ -404,6 +404,11 @@ Transform:
   - {fileID: 797696974}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &366968072 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4001727245703511324, guid: a751c01e47f9a9e4a9b79ec4da71a93a, type: 3}
+  m_PrefabInstance: {fileID: 1907160434}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &408523393
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -492,30 +497,6 @@ PrefabInstance:
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1237043550}
-    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: antidoteConsumeSFX.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: 'antidoteConsumeSFX.Array.data[0]'
-      value: 
-      objectReference: {fileID: 8300000, guid: eec83c96823d1d44c80206b76b4ffb1f, type: 3}
-    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: 'antidoteConsumeSFX.Array.data[1]'
-      value: 
-      objectReference: {fileID: 8300000, guid: e6466e7e5ff215f42a32422ee81fd385, type: 3}
-    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: 'antidoteConsumeSFX.Array.data[2]'
-      value: 
-      objectReference: {fileID: 8300000, guid: f6dc1440637d5004b98c3331b500eb03, type: 3}
-    - target: {fileID: 4630975579662658633, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: CollisionModule.enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4630975579662658633, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: 'CollisionModule.m_Planes.Array.data[0]'
-      value: 
-      objectReference: {fileID: 797696974}
     - target: {fileID: 4902862958743838899, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.75
@@ -572,10 +553,6 @@ PrefabInstance:
       propertyPath: interactionPromptText
       value: 
       objectReference: {fileID: 1907160435}
-    - target: {fileID: 5751204244364002677, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
-      propertyPath: requiredPowerCells
-      value: 4
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -968,7 +945,7 @@ PrefabInstance:
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: settingsMenuUI
       value: 
-      objectReference: {fileID: 901444590}
+      objectReference: {fileID: 366968072}
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: 'gameplayInputBehaviours.Array.data[0]'
       value: 
@@ -1969,7 +1946,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3356235219335088047, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: transformationDuration
-      value: 80
+      value: 600
       objectReference: {fileID: 0}
     - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: player
