@@ -5,6 +5,7 @@ public class PauseMenuController : MonoBehaviour
 {
     [Header("UI")]
     [SerializeField] private GameObject pauseMenuUI;
+    [SerializeField] private GameObject settingsMenuUI;
 
     [Header("Scene Transition")]
     [SerializeField] private SceneFade sceneFade;
@@ -34,10 +35,18 @@ public class PauseMenuController : MonoBehaviour
         if (GameManager.Instance == null || !GameManager.Instance.IsGameActive)
             return;
 
-        if (IsPaused)
-            ResumeGame();
+        if (settingsMenuUI.activeSelf)
+        {
+            pauseMenuUI.SetActive(true);
+            settingsMenuUI.SetActive(false);
+        }
         else
-            PauseGame();
+        {
+            if (IsPaused)
+                ResumeGame();
+            else
+                PauseGame();
+        }
     }
 
     private void SetGameplayInputEnabled(bool isEnabled)
