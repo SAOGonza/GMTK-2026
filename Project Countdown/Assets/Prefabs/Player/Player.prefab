@@ -287,8 +287,9 @@ MonoBehaviour:
   gameTimer: {fileID: 0}
   audioSource: {fileID: 4989886409703392916}
   antidoteConsumeSFX:
-  - {fileID: 8300000, guid: 3e5c9f1f60c8fad45b31a44a7786586d, type: 3}
-  - {fileID: 8300000, guid: f0d05d08d42ec3d4e919745d9ae6fe4f, type: 3}
+  - {fileID: 8300000, guid: eec83c96823d1d44c80206b76b4ffb1f, type: 3}
+  - {fileID: 8300000, guid: e6466e7e5ff215f42a32422ee81fd385, type: 3}
+  - {fileID: 8300000, guid: f6dc1440637d5004b98c3331b500eb03, type: 3}
 --- !u!114 &5751204244364002677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53cfaa0b8fc390d43aa77a23f53229ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
-  requiredPowerCells: 5
+  requiredPowerCells: 4
 --- !u!114 &5643253776278841209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,7 +315,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd861962345db744c92998bc0c5c0108, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerInteractor
-  interactionDistance: 2
+  interactionDistance: 3
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64

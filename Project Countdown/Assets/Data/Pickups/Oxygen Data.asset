@@ -15,4 +15,4 @@ MonoBehaviour:
   pickupName: Oxygen Canister
   description: Replenish your oxygen to 100%.
   pickupVFX: {fileID: 0}
-  pickupSFX: {fileID: 0}
+  pickupSFX: {fileID: 8300000, guid: 11d19cc4b1626c649a18fcb80630c25a, type: 3}

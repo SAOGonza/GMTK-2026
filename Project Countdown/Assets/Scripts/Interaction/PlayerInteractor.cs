@@ -13,6 +13,10 @@ public class PlayerInteractor : MonoBehaviour
     [SerializeField] private Camera playerCamera;
     [SerializeField] private TMP_Text interactionPromptText;
 
+    [Header("Voice Lines")]
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip[] pickupVoiceLines;
+
     private Player player;
 
     private IInteractable currentInteractable;
@@ -77,7 +81,12 @@ public class PlayerInteractor : MonoBehaviour
             return;
 
         if (Keyboard.current.eKey.wasPressedThisFrame)
+        {
+            int index = Random.Range(0, pickupVoiceLines.Length);
+
+            audioSource.PlayOneShot(pickupVoiceLines[index]);
             currentInteractable.Interact(player);
+        }
     }
 
     private void ShowPrompt(string message)
