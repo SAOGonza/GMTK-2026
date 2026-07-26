@@ -45,8 +45,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuController
   pauseMenuUI: {fileID: 0}
+  settingsMenuUI: {fileID: 0}
   sceneFade: {fileID: 0}
   mainMenuSceneName: Main_Menu
   gameplayInputBehaviours:
   - {fileID: 0}
   - {fileID: 0}
+  audioSource: {fileID: 0}
+  buttonSound: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
+  quitSound: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
