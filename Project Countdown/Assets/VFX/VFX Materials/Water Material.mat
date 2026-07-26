@@ -109,13 +109,13 @@ Material:
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Specular_Density: 47.7
-    - _Specular_Speed: 12.01
+    - _Specular_Density: 2783.6
+    - _Specular_Speed: 4
     - _Specular_Thickness: 6.67
     - _SrcBlend: 1
     - _SrcBlendAlpha: 1
     - _Surface: 0
-    - _Water_Depth: 0.14
+    - _Water_Depth: 0.2
     - _Wave_Amplitude: 0.41
     - _Wave_Frequency: 18.9
     - _Wave_Speed: 1.9
@@ -125,9 +125,9 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
-    - _Deep_Color: {r: 0.46431112, g: 0.72836196, b: 0.8867924, a: 1}
+    - _Deep_Color: {r: 0.020024918, g: 0.18561368, b: 0.2830189, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _Shallow_Color: {r: 0.9716981, g: 0.9716981, b: 0.9716981, a: 1}
+    - _Shallow_Color: {r: 0.17412782, g: 0.30154702, b: 0.4056604, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Specular_Color: {r: 0.3225347, g: 0.34930778, b: 0.4528302, a: 1}
   m_BuildTextureStacks: []
