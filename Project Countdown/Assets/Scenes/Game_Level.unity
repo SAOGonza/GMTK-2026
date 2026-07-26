@@ -873,9 +873,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2023836363}
     - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: swimSpeed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: cameraTransform
       value: 
       objectReference: {fileID: 1237043550}
+    - target: {fileID: 2336769325116550804, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: swimBoostMultiplier
+      value: 1.35
+      objectReference: {fileID: 0}
     - target: {fileID: 4902862958743838899, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.75
@@ -919,6 +927,10 @@ PrefabInstance:
     - target: {fileID: 5064759367466030989, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5627060627492744907, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: oxygenDrainRate
+      value: 1.11
       objectReference: {fileID: 0}
     - target: {fileID: 5627060627492744907, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: bubblesParticles
@@ -2293,9 +2305,21 @@ PrefabInstance:
       value: PauseMenuManager
       objectReference: {fileID: 0}
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
+      propertyPath: quitSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
+    - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: sceneFade
       value: 
       objectReference: {fileID: 408523394}
+    - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2023836366}
+    - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
+      propertyPath: buttonSound
+      value: 
+      objectReference: {fileID: 8300000, guid: ece651a0d1776b74e8d40abccbb96492, type: 3}
     - target: {fileID: 8224780613282710506, guid: 11d8bae1be20fd54d9ebdbd0bc096676, type: 3}
       propertyPath: pauseMenuUI
       value: 
@@ -5128,6 +5152,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7e0978f41ca06b4493fc21bcb5d5f9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::InfectionEffectsController
+--- !u!82 &2023836366 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4473099936945901473, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+  m_PrefabInstance: {fileID: 2023836362}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2041145213
 PrefabInstance:
   m_ObjectHideFlags: 0
