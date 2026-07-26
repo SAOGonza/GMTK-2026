@@ -697,6 +697,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2135328159}
     - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 408736426}
+    - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
       propertyPath: playerCamera
       value: 
       objectReference: {fileID: 1237043549}
@@ -704,6 +708,26 @@ PrefabInstance:
       propertyPath: interactionPromptText
       value: 
       objectReference: {fileID: 1907160435}
+    - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: pickupVoiceLines.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: 'pickupVoiceLines.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: f90561c0b9a4a06429a8da463f292713, type: 3}
+    - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: 'pickupVoiceLines.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 2c4e063085f9d8348b81626f1240fcec, type: 3}
+    - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: 'pickupVoiceLines.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4855f6cf886fc08488592ba90b39a139, type: 3}
+    - target: {fileID: 5643253776278841209, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+      propertyPath: 'pickupVoiceLines.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: cb1e6a2207fa9ef4cb1095eae27150c9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -913,6 +937,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a24fcdaf63d6c74b9ea9d250dd03638, type: 3}
+--- !u!82 &408736426 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 4989886409703392916, guid: 42cfacc12cca37a4ca9b74a43c01b4b2, type: 3}
+  m_PrefabInstance: {fileID: 408736421}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &482900823
 GameObject:
   m_ObjectHideFlags: 0
@@ -3328,7 +3357,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3356235219335088047, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: transformationDuration
-      value: 600
+      value: 85
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473099936945901473, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
+      propertyPath: m_Volume
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7205918387827038426, guid: 66c719a238fb19949b6aa9ad55c2fde9, type: 3}
       propertyPath: player
