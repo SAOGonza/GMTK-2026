@@ -18,6 +18,9 @@ public class GameTimer : MonoBehaviour
     public event Action<float> OnGaugeChanged;
     public event Action OnGaugeDepleted;
 
+    public event Action OnAntidoteStarted;
+    public event Action OnAntidoteEnded;
+
     private bool isDepleted;
 
     private void Awake()
@@ -38,6 +41,13 @@ public class GameTimer : MonoBehaviour
         if (antidoteTimeRemaining > 0f)
         {
             antidoteTimeRemaining -= Time.deltaTime;
+
+            if (antidoteTimeRemaining <= 0f)
+            {
+                antidoteTimeRemaining = 0f;
+                OnAntidoteEnded?.Invoke();
+            }
+
             return;
         }
 
@@ -47,6 +57,8 @@ public class GameTimer : MonoBehaviour
     public void ApplyAntidote()
     {
         antidoteTimeRemaining = antidotePauseDuration;
+
+        OnAntidoteStarted?.Invoke();
 
         Debug.Log($"Antidote applied. Infection paused for {antidotePauseDuration} seconds.");
     }
