@@ -7778,6 +7778,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 116167502865497911, guid: 274e88a046e73604db39772132053b6d, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[0].Input.Gain
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 116167502865497911, guid: 274e88a046e73604db39772132053b6d, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[1].Input.Gain
+      value: -20
+      objectReference: {fileID: 0}
     - target: {fileID: 1050994726583955899, guid: 274e88a046e73604db39772132053b6d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 10.75
